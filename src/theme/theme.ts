@@ -3,9 +3,10 @@
  * Material-UI v6.5.0 theme consuming design tokens from theme.json
  */
 
+/// <reference path="../types/theme.d.ts" />
+
 import { createTheme, Theme } from '@mui/material/styles';
 import themeTokens from '../../theme.json';
-import './types';
 
 /**
  * Spacing function for MUI

@@ -55,26 +55,26 @@ export const ListItem = React.forwardRef<HTMLElement, ListItemProps>(
   ) => {
     const theme = useTheme();
     const hoverColor =
-      (theme.vars as any)?.palette?.primary?._states?.hover ??
+      theme.palette.primary._states?.hover ??
       alpha(theme.palette.primary.main, 0.08);
     const focusColor =
-      (theme.vars as any)?.palette?.primary?._states?.focus ??
+      theme.palette.primary._states?.focus ??
       alpha(theme.palette.primary.main, 0.12);
     const selectedColor =
-      (theme.vars as any)?.palette?.primary?._states?.selected ??
+      theme.palette.primary._states?.selected ??
       alpha(theme.palette.primary.main, 0.12);
 
     // If button is true, use ListItemButton wrapper for interactivity
     if (button) {
       return (
         <MuiListItem
-          ref={ref}
+          ref={ref as any}
           dense={dense}
           disableGutters={disableGutters}
           divider={divider}
           disablePadding={disablePadding}
           secondaryAction={secondaryAction}
-          component={component}
+          {...(component && { component })}
           sx={sx}
           {...restProps}
         >
@@ -95,7 +95,7 @@ export const ListItem = React.forwardRef<HTMLElement, ListItemProps>(
               '&.Mui-focusVisible': {
                 outline: `3px solid ${focusColor}`,
                 outlineOffset: 0,
-                borderRadius: theme.shape?.sm ?? theme.shape.borderRadius,
+                borderRadius: (theme.shape as any).sm,
               },
               // Selected state: Apply SemiBold weight and primary.dark color to text
               '&.Mui-selected': {
@@ -122,14 +122,14 @@ export const ListItem = React.forwardRef<HTMLElement, ListItemProps>(
     // Otherwise, use standard ListItem (static, non-interactive)
     return (
       <MuiListItem
-        ref={ref}
+        ref={ref as any}
         dense={dense}
         disableGutters={disableGutters}
         divider={divider}
         disablePadding={disablePadding}
         secondaryAction={secondaryAction}
         alignItems={alignItems}
-        component={component}
+        {...(component && { component })}
         sx={sx}
         {...restProps}
       >

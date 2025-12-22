@@ -121,6 +121,7 @@ export const WithSecondaryAction: Story = {
       <Box sx={{ width: 300, bgcolor: 'background.paper' }}>
         <List>
           <ListItem
+            {...args}
             onClick={() => console.log('Clicked')}
             secondaryAction={
               <IconButton edge="end" aria-label="add">

@@ -30,7 +30,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         sx={{
           // Use theme tokens for consistent styling
           textTransform: 'none', // Override MUI default uppercase
-          borderRadius: theme.shape.rounded, // Use rounded shape token
+          borderRadius: (theme.shape as any).rounded, // Use rounded shape token
           fontWeight: theme.typography.fontWeightSemiBold,
           // Allow custom sx to override defaults
           ...sx,

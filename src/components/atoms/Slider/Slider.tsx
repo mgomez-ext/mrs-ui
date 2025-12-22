@@ -74,7 +74,7 @@ export const Slider = React.forwardRef<HTMLSpanElement, SliderProps>(
         getAriaValueText={getAriaValueText}
         name={name}
         id={id}
-        component={component}
+        {...(component && { component })}
         sx={sx}
         {...restProps}
       />

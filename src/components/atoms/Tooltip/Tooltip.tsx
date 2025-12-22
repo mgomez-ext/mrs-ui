@@ -28,7 +28,7 @@ const StyledTooltip = styled(
     fontWeight: theme.typography.fontWeightMedium,
     lineHeight: '14px',
     padding: '4px 8px',
-    borderRadius: theme.shape.sm,
+    borderRadius: (theme.shape as any).sm,
     fontFamily: theme.typography.fontFamily,
   },
   '& .MuiTooltip-arrow': {

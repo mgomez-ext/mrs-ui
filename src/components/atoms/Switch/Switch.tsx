@@ -20,8 +20,8 @@ import { SwitchProps } from './Switch.types';
  * @param props - Switch component props
  * @returns Switch component
  */
-// MUI Switch renders a <span>, so the ref should target HTMLSpanElement for type safety.
-export const Switch = React.forwardRef<HTMLSpanElement, SwitchProps>(
+// MUI Switch internally renders button element for accessibility
+export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
   (
     {
       checked,
