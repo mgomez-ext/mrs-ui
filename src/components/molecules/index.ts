@@ -5,5 +5,6 @@
 
 export * from './Autocomplete';
 export * from './ButtonGroup';
+export * from './Alert';
 export * from './List';
 export * from './ListItem';
