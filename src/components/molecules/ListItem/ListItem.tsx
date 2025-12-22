@@ -13,7 +13,7 @@
 import React from 'react';
 import MuiListItem from '@mui/material/ListItem';
 import MuiListItemButton from '@mui/material/ListItemButton';
-import { useTheme } from '@mui/material/styles';
+import { alpha, useTheme } from '@mui/material/styles';
 import { ListItemProps } from './ListItem.types';
 
 /**
@@ -54,6 +54,15 @@ export const ListItem = React.forwardRef<HTMLElement, ListItemProps>(
     ref
   ) => {
     const theme = useTheme();
+    const hoverColor =
+      (theme.vars as any)?.palette?.primary?._states?.hover ??
+      alpha(theme.palette.primary.main, 0.08);
+    const focusColor =
+      (theme.vars as any)?.palette?.primary?._states?.focus ??
+      alpha(theme.palette.primary.main, 0.12);
+    const selectedColor =
+      (theme.vars as any)?.palette?.primary?._states?.selected ??
+      alpha(theme.palette.primary.main, 0.12);
 
     // If button is true, use ListItemButton wrapper for interactivity
     if (button) {
@@ -76,7 +85,25 @@ export const ListItem = React.forwardRef<HTMLElement, ListItemProps>(
             onClick={onClick}
             alignItems={alignItems}
             sx={{
+              // Hover/press/focus styling aligned with tokens
+              '&:hover': {
+                backgroundColor: hoverColor,
+              },
+              '&:active': {
+                backgroundColor: selectedColor,
+              },
+              '&.Mui-focusVisible': {
+                outline: `3px solid ${focusColor}`,
+                outlineOffset: 0,
+                borderRadius: theme.shape?.sm ?? theme.shape.borderRadius,
+              },
               // Selected state: Apply SemiBold weight and primary.dark color to text
+              '&.Mui-selected': {
+                backgroundColor: selectedColor,
+                '&:hover': {
+                  backgroundColor: hoverColor,
+                },
+              },
               ...(selected && {
                 '& .MuiListItemText-primary': {
                   fontFamily: theme.typography.subtitle1.fontFamily,
