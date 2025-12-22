@@ -4,6 +4,10 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { Box, Typography, Divider, ListItemText, ListItemIcon, ListSubheader } from '@mui/material';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import InboxRoundedIcon from '@mui/icons-material/InboxRounded';
+import DraftsRoundedIcon from '@mui/icons-material/DraftsRounded';
+import SendRoundedIcon from '@mui/icons-material/SendRounded';
 import { List } from './List';
 import { ListItem } from '../ListItem';
 import { Icon } from '../../atoms/Icon';
@@ -138,19 +142,19 @@ export const WithIcons: Story = {
       <List>
         <ListItem>
           <ListItemIcon>
-            <Icon name="InboxRounded" />
+            <Icon icon={InboxRoundedIcon} />
           </ListItemIcon>
           <ListItemText primary="Inbox" />
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Icon name="DraftsRounded" />
+            <Icon icon={DraftsRoundedIcon} />
           </ListItemIcon>
           <ListItemText primary="Drafts" />
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Icon name="SendRounded" />
+            <Icon icon={SendRoundedIcon} />
           </ListItemIcon>
           <ListItemText primary="Sent" />
         </ListItem>
@@ -166,24 +170,24 @@ export const WithSecondaryActions: Story = {
         <ListItem
           secondaryAction={
             <IconButton edge="end" aria-label="add">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           }
         >
           <ListItemIcon>
-            <Icon name="InboxRounded" />
+            <Icon icon={InboxRoundedIcon} />
           </ListItemIcon>
           <ListItemText primary="Inbox" />
         </ListItem>
         <ListItem
           secondaryAction={
             <IconButton edge="end" aria-label="add">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           }
         >
           <ListItemIcon>
-            <Icon name="DraftsRounded" />
+            <Icon icon={DraftsRoundedIcon} />
           </ListItemIcon>
           <ListItemText primary="Drafts" />
         </ListItem>
@@ -236,29 +240,29 @@ export const AllVariants: Story = {
         >
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
         </List>
@@ -279,29 +283,29 @@ export const AllVariants: Story = {
         >
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
         </List>
@@ -322,29 +326,29 @@ export const AllVariants: Story = {
         >
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
         </List>
@@ -366,29 +370,29 @@ export const AllVariants: Story = {
         >
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
           <ListItem>
             <ListItemIcon>
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </ListItemIcon>
             <ListItemText primary="List item" />
             <IconButton edge="end">
-              <Icon name="AddRounded" />
+              <Icon icon={AddRoundedIcon} />
             </IconButton>
           </ListItem>
         </List>
