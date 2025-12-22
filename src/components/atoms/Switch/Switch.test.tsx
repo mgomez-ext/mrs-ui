@@ -98,4 +98,3 @@ describe('Switch', () => {
     expect(toggle).toHaveAttribute('aria-label', 'Custom switch');
   });
 });
-

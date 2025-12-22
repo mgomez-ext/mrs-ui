@@ -9,42 +9,62 @@ import { ListItemButtonProps as MuiListItemButtonProps } from '@mui/material/Lis
  * MRS ListItem component props
  * Extends Material-UI ListItemProps and ListItemButtonProps
  *
+ * Based on Figma design specifications:
+ * - Always interactive by default (uses ListItemButton internally)
+ * - Special styling for selected state (SemiBold font, primary/dark color)
+ * - Support for dense and regular layouts
+ * - Support for left/right content slots
+ *
  * @example
  * ```tsx
- * <ListItem>
+ * // Simple interactive list item
+ * <ListItem onClick={handleClick}>
  *   <ListItemText primary="Item" />
  * </ListItem>
- * <ListItem button onClick={handleClick}>
+ *
+ * // With icon and secondary action
+ * <ListItem
+ *   selected={isSelected}
+ *   onClick={handleClick}
+ *   secondaryAction={<IconButton><Icon /></IconButton>}
+ * >
  *   <ListItemIcon><Icon /></ListItemIcon>
  *   <ListItemText primary="Clickable" secondary="With icon" />
+ * </ListItem>
+ *
+ * // Dense variant without gutters
+ * <ListItem dense disableGutters>
+ *   <ListItemText primary="Dense item" />
  * </ListItem>
  * ```
  */
 export interface ListItemProps
   extends Omit<MuiListItemProps, 'button'>,
-    Pick<
-      MuiListItemButtonProps,
-      'autoFocus' | 'selected' | 'onClick' | 'disabled'
-    > {
+    Pick<MuiListItemButtonProps, 'autoFocus' | 'selected' | 'onClick' | 'disabled'> {
   /**
    * The content of the component.
    */
   children?: React.ReactNode;
 
   /**
-   * If `true`, the list item is a button (using `ListItemButton`).
-   * @default false
+   * If `true`, the list item is interactive (clickable).
+   * By default, ListItem is always interactive unless explicitly disabled.
+   * @default true
    */
   button?: boolean;
 
   /**
    * If `true`, compact vertical padding designed for keyboard and mouse input is used.
+   * - Regular: 8px vertical padding
+   * - Dense: 4px vertical padding
    * @default false
    */
   dense?: boolean;
 
   /**
    * If `true`, the left and right padding is removed.
+   * - Regular: 16px horizontal padding
+   * - Disabled: 0px horizontal padding
    * @default false
    */
   disableGutters?: boolean;
@@ -63,6 +83,7 @@ export interface ListItemProps
 
   /**
    * The element to display at the end of ListItem.
+   * Typically used for IconButton or other actions.
    */
   secondaryAction?: React.ReactNode;
 
@@ -73,29 +94,29 @@ export interface ListItemProps
   alignItems?: 'flex-start' | 'center';
 
   /**
-   * If `true`, the list item is selected.
-   * Only applicable when `button` is true.
+   * If `true`, the list item is in selected state.
+   * Selected state applies special styling:
+   * - Background: primary._states.focus
+   * - Text: SemiBold weight and primary.dark color
    * @default false
    */
   selected?: boolean;
 
   /**
-   * If `true`, the list item is disabled.
-   * Only applicable when `button` is true.
+   * If `true`, the list item is disabled and non-interactive.
    * @default false
    */
   disabled?: boolean;
 
   /**
    * If `true`, the element will receive focus automatically.
-   * Only applicable when `button` is true.
    * @default false
    */
   autoFocus?: boolean;
 
   /**
    * Callback fired when the component is clicked.
-   * Only applicable when `button` is true.
+   * Required for interactive list items unless button={false}.
    */
   onClick?: MuiListItemButtonProps['onClick'];
 
@@ -110,4 +131,3 @@ export interface ListItemProps
    */
   sx?: MuiListItemProps['sx'];
 }
-

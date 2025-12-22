@@ -63,4 +63,3 @@ export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
 );
 
 Switch.displayName = 'Switch';
-

@@ -89,11 +89,7 @@ export interface SliderProps extends Omit<MuiSliderProps, 'size' | 'color'> {
    * @param {number | number[]} value The new value.
    * @param {number} activeThumb Index of the currently moved thumb.
    */
-  onChange?: (
-    event: Event,
-    value: number | number[],
-    activeThumb: number
-  ) => void;
+  onChange?: (event: Event, value: number | number[], activeThumb: number) => void;
 
   /**
    * Callback function that is fired when the `mouseup` is triggered.
@@ -101,10 +97,7 @@ export interface SliderProps extends Omit<MuiSliderProps, 'size' | 'color'> {
    * @param {React.SyntheticEvent | Event} event The event source of the callback. **Warning**: This is a generic event not a change event.
    * @param {number | number[]} value The new value.
    */
-  onChangeCommitted?: (
-    event: React.SyntheticEvent | Event,
-    value: number | number[]
-  ) => void;
+  onChangeCommitted?: (event: React.SyntheticEvent | Event, value: number | number[]) => void;
 
   /**
    * Controls when the value label is displayed:
@@ -180,4 +173,3 @@ export interface SliderProps extends Omit<MuiSliderProps, 'size' | 'color'> {
    */
   sx?: MuiSliderProps['sx'];
 }
-

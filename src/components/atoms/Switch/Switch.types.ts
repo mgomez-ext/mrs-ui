@@ -84,4 +84,3 @@ export interface SwitchProps extends Omit<MuiSwitchProps, 'size' | 'color'> {
    */
   sx?: MuiSwitchProps['sx'];
 }
-

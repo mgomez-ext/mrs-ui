@@ -56,19 +56,26 @@ export const Default: Story = {
   render: () => (
     <Box sx={{ width: 300, bgcolor: 'background.paper' }}>
       <List>
-        <ListItem>
-          <ListItemText primary="Default list item" />
+        <ListItem onClick={() => console.log('Clicked')}>
+          <ListItemText primary="Default list item (interactive)" />
         </ListItem>
       </List>
     </Box>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story: 'Default list item is interactive by default (button=true).',
+      },
+    },
+  },
 };
 
 export const WithIcon: Story = {
   render: () => (
     <Box sx={{ width: 300, bgcolor: 'background.paper' }}>
       <List>
-        <ListItem>
+        <ListItem onClick={() => console.log('Clicked')}>
           <ListItemIcon>
             <Icon name="InboxRounded" />
           </ListItemIcon>
@@ -83,7 +90,7 @@ export const WithSecondaryText: Story = {
   render: () => (
     <Box sx={{ width: 300, bgcolor: 'background.paper' }}>
       <List>
-        <ListItem>
+        <ListItem onClick={() => console.log('Clicked')}>
           <ListItemIcon>
             <Icon name="AddRounded" />
           </ListItemIcon>
@@ -99,6 +106,7 @@ export const WithSecondaryAction: Story = {
     <Box sx={{ width: 300, bgcolor: 'background.paper' }}>
       <List>
         <ListItem
+          onClick={() => console.log('Clicked')}
           secondaryAction={
             <IconButton edge="end" aria-label="add">
               <Icon name="AddRounded" />
@@ -162,13 +170,23 @@ export const Dense: Story = {
 
 export const DisableGutters: Story = {
   render: () => (
-    <Box sx={{ width: 300, bgcolor: 'background.paper' }}>
+    <Box sx={{ width: 300, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}>
       <List>
-        <ListItem disableGutters>
+        <ListItem disableGutters onClick={() => console.log('Clicked')}>
           <ListItemIcon>
             <Icon name="AddRounded" />
           </ListItemIcon>
-          <ListItemText primary="No left/right padding" />
+          <ListItemText primary="No horizontal padding" />
+          <IconButton edge="end">
+            <Icon name="AddRounded" />
+          </IconButton>
+        </ListItem>
+        <MuiDivider component="li" />
+        <ListItem onClick={() => console.log('Clicked')}>
+          <ListItemIcon>
+            <Icon name="AddRounded" />
+          </ListItemIcon>
+          <ListItemText primary="With horizontal padding" />
           <IconButton edge="end">
             <Icon name="AddRounded" />
           </IconButton>
@@ -178,26 +196,26 @@ export const DisableGutters: Story = {
   ),
 };
 
-export const ButtonVariant: Story = {
+export const InteractiveWithSelection: Story = {
   render: () => {
     const [selectedIndex, setSelectedIndex] = React.useState(1);
 
     return (
       <Box sx={{ width: 300, bgcolor: 'background.paper' }}>
         <List>
-          <ListItem button onClick={() => setSelectedIndex(0)} selected={selectedIndex === 0}>
+          <ListItem onClick={() => setSelectedIndex(0)} selected={selectedIndex === 0}>
             <ListItemIcon>
               <Icon name="InboxRounded" />
             </ListItemIcon>
             <ListItemText primary="Inbox" />
           </ListItem>
-          <ListItem button onClick={() => setSelectedIndex(1)} selected={selectedIndex === 1}>
+          <ListItem onClick={() => setSelectedIndex(1)} selected={selectedIndex === 1}>
             <ListItemIcon>
               <Icon name="DraftsRounded" />
             </ListItemIcon>
             <ListItemText primary="Drafts" />
           </ListItem>
-          <ListItem button onClick={() => setSelectedIndex(2)} selected={selectedIndex === 2}>
+          <ListItem onClick={() => setSelectedIndex(2)} selected={selectedIndex === 2}>
             <ListItemIcon>
               <Icon name="SendRounded" />
             </ListItemIcon>
@@ -210,7 +228,8 @@ export const ButtonVariant: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Interactive list items using the button prop with selection state.',
+        story:
+          'Interactive list items with selection state. Note: Selected items show text in SemiBold weight and primary.dark color (Figma spec).',
       },
     },
   },
@@ -221,10 +240,10 @@ export const States: Story = {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, p: 2 }}>
       <Box>
         <Typography variant="body2" gutterBottom>
-          Enabled
+          Enabled (Default)
         </Typography>
         <List sx={{ width: 300, bgcolor: 'background.paper' }}>
-          <ListItem button>
+          <ListItem onClick={() => console.log('Clicked')}>
             <ListItemIcon>
               <Icon name="AddRounded" />
             </ListItemIcon>
@@ -238,10 +257,10 @@ export const States: Story = {
 
       <Box>
         <Typography variant="body2" gutterBottom>
-          Selected
+          Selected (SemiBold, primary.dark)
         </Typography>
         <List sx={{ width: 300, bgcolor: 'background.paper' }}>
-          <ListItem button selected>
+          <ListItem selected onClick={() => console.log('Clicked')}>
             <ListItemIcon>
               <Icon name="AddRounded" />
             </ListItemIcon>
@@ -258,7 +277,7 @@ export const States: Story = {
           Disabled
         </Typography>
         <List sx={{ width: 300, bgcolor: 'background.paper' }}>
-          <ListItem button disabled>
+          <ListItem disabled>
             <ListItemIcon>
               <Icon name="AddRounded" />
             </ListItemIcon>
@@ -271,6 +290,14 @@ export const States: Story = {
       </Box>
     </Box>
   ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'All interaction states. Selected state has special styling with SemiBold font weight and primary.dark color as per Figma specifications.',
+      },
+    },
+  },
 };
 
 export const AllVariants: Story = {
@@ -458,4 +485,3 @@ export const Playground: Story = {
     },
   },
 };
-

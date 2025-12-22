@@ -51,4 +51,3 @@ export const List = React.forwardRef<HTMLUListElement, ListProps>(
 );
 
 List.displayName = 'List';
-

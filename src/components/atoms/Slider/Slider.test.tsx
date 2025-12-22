@@ -229,11 +229,7 @@ describe('Slider', () => {
   it('applies getAriaValueText function', () => {
     const getAriaValueText = (value: number) => `${value}°C`;
     renderWithTheme(
-      <Slider
-        defaultValue={30}
-        getAriaValueText={getAriaValueText}
-        aria-label="Temperature"
-      />
+      <Slider defaultValue={30} getAriaValueText={getAriaValueText} aria-label="Temperature" />
     );
     const slider = screen.getByRole('slider');
     expect(slider).toHaveAttribute('aria-valuetext', '30°C');
@@ -273,9 +269,7 @@ describe('Slider', () => {
 
   it('handles onChangeCommitted event', () => {
     const handleChangeCommitted = jest.fn();
-    renderWithTheme(
-      <Slider onChangeCommitted={handleChangeCommitted} aria-label="test-slider" />
-    );
+    renderWithTheme(<Slider onChangeCommitted={handleChangeCommitted} aria-label="test-slider" />);
     const slider = screen.getByRole('slider');
 
     // Simulate value change and commit
@@ -285,4 +279,3 @@ describe('Slider', () => {
     expect(handleChangeCommitted).toHaveBeenCalled();
   });
 });
-

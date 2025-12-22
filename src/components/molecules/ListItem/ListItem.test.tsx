@@ -54,11 +54,7 @@ describe('ListItem', () => {
     it('should render with secondary action', () => {
       render(
         <List>
-          <ListItem
-            secondaryAction={
-              <button data-testid="action-button">Action</button>
-            }
-          >
+          <ListItem secondaryAction={<button data-testid="action-button">Action</button>}>
             <ListItemText primary="Test Item" />
           </ListItem>
         </List>
@@ -211,7 +207,7 @@ describe('ListItem', () => {
       );
 
       const buttonElement = screen.getByText('Test Item').closest('.MuiListItemButton-root');
-      
+
       if (buttonElement) {
         await user.click(buttonElement);
         expect(handleClick).not.toHaveBeenCalled();
@@ -264,11 +260,7 @@ describe('ListItem', () => {
     it('should render complex children composition', () => {
       render(
         <List>
-          <ListItem
-            secondaryAction={
-              <button data-testid="action-button">Action</button>
-            }
-          >
+          <ListItem secondaryAction={<button data-testid="action-button">Action</button>}>
             <ListItemIcon>
               <span data-testid="test-icon">Icon</span>
             </ListItemIcon>
@@ -284,4 +276,3 @@ describe('ListItem', () => {
     });
   });
 });
-

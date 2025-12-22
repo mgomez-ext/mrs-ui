@@ -185,12 +185,7 @@ export const RangeSlider: Story = {
         <Typography variant="body2" gutterBottom>
           Range Slider
         </Typography>
-        <Slider
-          value={value}
-          onChange={handleChange}
-          valueLabelDisplay="auto"
-          aria-label="Range"
-        />
+        <Slider value={value} onChange={handleChange} valueLabelDisplay="auto" aria-label="Range" />
       </Box>
     );
   },
@@ -265,12 +260,7 @@ export const Vertical: Story = {
         <Typography variant="body2" gutterBottom>
           Disabled
         </Typography>
-        <Slider
-          orientation="vertical"
-          defaultValue={30}
-          disabled
-          aria-label="Disabled vertical"
-        />
+        <Slider orientation="vertical" defaultValue={30} disabled aria-label="Disabled vertical" />
       </Box>
     </Stack>
   ),
@@ -522,7 +512,12 @@ export const Playground: Story = {
     track: 'normal',
   },
   render: (args) => (
-    <Box sx={{ width: args.orientation === 'vertical' ? 'auto' : 300, height: args.orientation === 'vertical' ? 300 : 'auto' }}>
+    <Box
+      sx={{
+        width: args.orientation === 'vertical' ? 'auto' : 300,
+        height: args.orientation === 'vertical' ? 300 : 'auto',
+      }}
+    >
       <Slider {...args} />
     </Box>
   ),
@@ -534,4 +529,3 @@ export const Playground: Story = {
     },
   },
 };
-

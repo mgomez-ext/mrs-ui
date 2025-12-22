@@ -226,7 +226,14 @@ export const AllVariants: Story = {
         <Typography variant="h6" gutterBottom>
           Disable Padding = False, Dense = False
         </Typography>
-        <List sx={{ width: 300, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}>
+        <List
+          sx={{
+            width: 300,
+            bgcolor: 'background.paper',
+            border: '1px solid',
+            borderColor: 'divider',
+          }}
+        >
           <ListItem>
             <ListItemIcon>
               <Icon name="AddRounded" />
@@ -261,7 +268,15 @@ export const AllVariants: Story = {
         <Typography variant="h6" gutterBottom>
           Disable Padding = True, Dense = False
         </Typography>
-        <List disablePadding sx={{ width: 300, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}>
+        <List
+          disablePadding
+          sx={{
+            width: 300,
+            bgcolor: 'background.paper',
+            border: '1px solid',
+            borderColor: 'divider',
+          }}
+        >
           <ListItem>
             <ListItemIcon>
               <Icon name="AddRounded" />
@@ -296,7 +311,15 @@ export const AllVariants: Story = {
         <Typography variant="h6" gutterBottom>
           Disable Padding = False, Dense = True
         </Typography>
-        <List dense sx={{ width: 300, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}>
+        <List
+          dense
+          sx={{
+            width: 300,
+            bgcolor: 'background.paper',
+            border: '1px solid',
+            borderColor: 'divider',
+          }}
+        >
           <ListItem>
             <ListItemIcon>
               <Icon name="AddRounded" />
@@ -331,7 +354,16 @@ export const AllVariants: Story = {
         <Typography variant="h6" gutterBottom>
           Disable Padding = True, Dense = True
         </Typography>
-        <List dense disablePadding sx={{ width: 300, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}>
+        <List
+          dense
+          disablePadding
+          sx={{
+            width: 300,
+            bgcolor: 'background.paper',
+            border: '1px solid',
+            borderColor: 'divider',
+          }}
+        >
           <ListItem>
             <ListItemIcon>
               <Icon name="AddRounded" />
@@ -400,4 +432,3 @@ export const Playground: Story = {
     },
   },
 };
-

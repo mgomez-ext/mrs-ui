@@ -55,4 +55,3 @@ export interface ListProps extends MuiListProps {
    */
   sx?: MuiListProps['sx'];
 }
-
