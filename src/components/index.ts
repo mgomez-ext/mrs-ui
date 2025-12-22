@@ -7,7 +7,7 @@
 export * from './atoms';
 
 // Molecules
-// export * from './molecules';
+export * from './molecules';
 
 // Organisms
 // export * from './organisms';
