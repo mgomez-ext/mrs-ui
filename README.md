@@ -119,6 +119,13 @@ const borderRadius = shape.rounded; // 9999
 
 ### Storybook
 
+**🌐 Online Storybook**
+
+Explore all components in our published Storybook:
+👉 [View Live Storybook](#) _(Link will be available after first Chromatic publish)_
+
+**💻 Local Development**
+
 Run Storybook locally to explore all components:
 
 ```bash
@@ -126,6 +133,10 @@ npm run dev
 ```
 
 Then open [http://localhost:6006](http://localhost:6006) in your browser.
+
+**📖 Setup Guide**
+
+See [CHROMATIC_SETUP.md](./CHROMATIC_SETUP.md) for instructions on publishing Storybook with Chromatic.
 
 ### Component API
 
@@ -165,6 +176,7 @@ npm run dev
 - `npm run dev` - Start Storybook development server
 - `npm run build` - Build the library for production
 - `npm run build-storybook` - Build Storybook for deployment
+- `npm run chromatic` - Publish Storybook to Chromatic
 - `npm test` - Run tests with Jest
 - `npm run test:watch` - Run tests in watch mode
 - `npm run type-check` - Check TypeScript types

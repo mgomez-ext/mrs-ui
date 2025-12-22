@@ -1,0 +1,31 @@
+# Chromatic Configuration
+# This file tells Chromatic which files to ignore when detecting changes
+
+# Build directories
+dist/
+build/
+storybook-static/
+
+# Dependencies
+node_modules/
+
+# Test files
+**/*.test.tsx
+**/*.test.ts
+
+# Configuration files
+*.config.js
+*.config.ts
+tsconfig.json
+
+# Documentation files that don't affect visual components
+*.md
+CHANGELOG.md
+README.md
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
