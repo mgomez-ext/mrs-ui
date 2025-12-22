@@ -39,8 +39,8 @@ import { ListItemButtonProps as MuiListItemButtonProps } from '@mui/material/Lis
  * ```
  */
 export interface ListItemProps
-  extends Omit<MuiListItemProps, 'button'>,
-    Pick<MuiListItemButtonProps, 'autoFocus' | 'selected' | 'onClick' | 'disabled'> {
+  extends Omit<MuiListItemProps, 'button' | 'onClick'>,
+    Pick<MuiListItemButtonProps, 'autoFocus' | 'selected' | 'disabled'> {
   /**
    * The content of the component.
    */
@@ -116,7 +116,7 @@ export interface ListItemProps
 
   /**
    * Callback fired when the component is clicked.
-   * Required for interactive list items unless button={false}.
+   * Uses ListItemButton signature (div) for interactive mode while staying compatible with LI root.
    */
   onClick?: MuiListItemButtonProps['onClick'];
 
