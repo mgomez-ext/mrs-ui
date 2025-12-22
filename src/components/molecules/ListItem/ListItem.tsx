@@ -31,7 +31,8 @@ import { ListItemProps } from './ListItem.types';
  * @param props - ListItem component props
  * @returns ListItem component
  */
-export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
+// Use HTMLElement to remain compatible with polymorphic `component` prop.
+export const ListItem = React.forwardRef<HTMLElement, ListItemProps>(
   (
     {
       children,
