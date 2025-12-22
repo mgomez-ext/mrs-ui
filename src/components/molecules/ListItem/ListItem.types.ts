@@ -39,7 +39,8 @@ import { ListItemButtonProps as MuiListItemButtonProps } from '@mui/material/Lis
  * ```
  */
 export interface ListItemProps
-  extends Omit<MuiListItemProps, 'button' | 'onClick'>,
+  extends
+    Omit<MuiListItemProps, 'button' | 'onClick'>,
     Pick<MuiListItemButtonProps, 'autoFocus' | 'selected' | 'disabled'> {
   /**
    * The content of the component.

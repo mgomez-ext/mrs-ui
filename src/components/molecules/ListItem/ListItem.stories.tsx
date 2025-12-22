@@ -170,7 +170,9 @@ export const Dense: Story = {
 
 export const DisableGutters: Story = {
   render: () => (
-    <Box sx={{ width: 300, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}>
+    <Box
+      sx={{ width: 300, bgcolor: 'background.paper', border: '1px solid', borderColor: 'divider' }}
+    >
       <List>
         <ListItem disableGutters onClick={() => console.log('Clicked')}>
           <ListItemIcon>
