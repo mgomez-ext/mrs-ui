@@ -15,6 +15,7 @@ export * from './IconButton';
 export * from './LinearProgress';
 export * from './Paper';
 export * from './Radio';
+export * from './Switch';
 export * from './Skeleton';
 export * from './Tooltip';
 export * from './Typography';
