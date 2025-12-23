@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { TabProps as MuiTabProps } from '@mui/material/Tab';
+import type { ReactNode } from 'react';
+import type { TabProps as MuiTabProps } from '@mui/material/Tab';
 
 export type TabColor = 'primary' | 'secondary' | 'inherit';
 

@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { Tab as MuiTab } from '@mui/material/Tab';
-import { TabProps, TabIconPosition } from './Tab.types';
+import type { TabProps, TabIconPosition } from './Tab.types';
 
 const mapIconPosition = (position: TabIconPosition) => {
   if (position === 'right') return 'end';
