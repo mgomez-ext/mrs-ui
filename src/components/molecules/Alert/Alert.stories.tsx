@@ -2,6 +2,7 @@
  * Alert component stories
  */
 
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Stack, Box, Button } from '@mui/material';
 import { Alert } from './Alert';
@@ -45,12 +46,11 @@ export const Variants: Story = {
     close: false,
     severity: 'info',
   },
-
   render: () => (
     <Stack spacing={3}>
       {(['error', 'warning', 'info', 'success'] as const).map((severity) => (
         <Box key={severity}>
-          <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap>
+          <Stack direction="column" spacing={2} flexWrap="wrap" useFlexGap>
             <Alert severity={severity} variant="filled" title="Title" description="Description" />
             <Alert severity={severity} variant="outlined" title="Title" description="Description" />
             <Alert severity={severity} variant="standard" title="Title" description="Description" />
@@ -69,7 +69,8 @@ export const WithoutIcon: Story = {
   render: () => (
     <Stack spacing={2}>
       <Alert severity="error" variant="filled" icon={false} title="No icon" description="Filled" />
-      <Alert
+      <Alerty
+      
         severity="info"
         variant="outlined"
         icon={false}

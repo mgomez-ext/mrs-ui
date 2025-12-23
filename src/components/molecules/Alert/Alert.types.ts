@@ -22,7 +22,10 @@ export type AlertVariant = 'filled' | 'outlined' | 'standard';
  * convenience flags for optional parts of the layout (icon, close, action).
  */
 export interface AlertProps
-  extends Omit<MuiAlertProps, 'severity' | 'variant' | 'icon' | 'action'> {
+  extends Omit<
+    MuiAlertProps,
+    'severity' | 'variant' | 'icon' | 'action' | 'title'
+  > {
   /**
    * Alert severity. Controls colors and default icon.
    * @default 'error'

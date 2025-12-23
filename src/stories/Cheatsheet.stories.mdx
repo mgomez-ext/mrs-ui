@@ -1,0 +1,584 @@
+import React from 'react';
+import { Meta } from '@storybook/blocks';
+import {
+  Button,
+  Chip,
+  Checkbox,
+  Radio,
+  Switch,
+  IconButton,
+  Divider,
+  Paper,
+  Typography as MRSTypography,
+} from '../components';
+import { Alert } from '../components/molecules/Alert';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Avatar,
+  Badge,
+  Box,
+  Card,
+  CardContent,
+  CircularProgress,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Rating,
+  Select,
+  Stack,
+  Tab,
+  Tabs,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  TextField,
+  useTheme,
+} from '@mui/material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AddIcon from '@mui/icons-material/Add';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import CancelIcon from '@mui/icons-material/Cancel';
+import CheckIcon from '@mui/icons-material/Check';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import HealingIcon from '@mui/icons-material/Healing';
+import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
+import HistoryIcon from '@mui/icons-material/History';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
+
+<Meta title="Cheatsheet/Intro" parameters={{ layout: 'fullscreen' }} />
+
+export const CheatsheetPage = () => {
+  const theme = useTheme();
+  const [tab, setTab] = React.useState(0);
+  const [standardSelect, setStandardSelect] = React.useState('Value');
+  const [filledSelect, setFilledSelect] = React.useState('Value');
+  const [outlinedSelect, setOutlinedSelect] = React.useState('Value');
+
+  const navItems = [
+    { icon: <HomeOutlinedIcon fontSize="small" />, label: 'Inicio', active: true },
+    { icon: <CalendarTodayIcon fontSize="small" />, label: 'Citas' },
+    { icon: <FavoriteBorderIcon fontSize="small" />, label: 'Mi salud' },
+    { icon: <ReceiptLongIcon fontSize="small" />, label: 'Órdenes' },
+    { icon: <MedicalInformationIcon fontSize="small" />, label: 'Recetas' },
+    { icon: <HealingIcon fontSize="small" />, label: 'Resultados' },
+    { icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Cirugías' },
+    { icon: <HistoryIcon fontSize="small" />, label: 'Historial' },
+    { icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Salud preventiva' },
+  ];
+
+  const tableRows = Array.from({ length: 5 }).map((_, idx) => ({
+    id: idx,
+    cells: ['Cell', 'Cell', 'Cell', 'Cell', 'Cell'],
+  }));
+
+  return (
+    <Box
+      sx={{
+        bgcolor: 'background.default',
+        minHeight: '100vh',
+        display: 'flex',
+      }}
+    >
+      <Paper
+        elevation={1}
+        square
+        sx={{
+          width: 240,
+          p: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 2,
+          borderRight: `1px solid ${theme.palette.divider}`,
+          bgcolor: 'background.paper',
+        }}
+      >
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          fullWidth
+          sx={{ borderRadius: theme.shape.md }}
+        >
+          + Agendar
+        </Button>
+        <Stack spacing={0.5}>
+          {navItems.map((item) => (
+            <Stack
+              key={item.label}
+              direction="row"
+              spacing={1}
+              alignItems="center"
+              sx={{
+                px: 1.25,
+                py: 0.75,
+                borderRadius: theme.shape.sm,
+                bgcolor: item.active ? 'action.selected' : 'transparent',
+                color: item.active ? 'text.primary' : 'text.secondary',
+                fontWeight: item.active ? 600 : 400,
+                cursor: 'default',
+              }}
+            >
+              {item.icon}
+              <MRSTypography variant="body2">{item.label}</MRSTypography>
+            </Stack>
+          ))}
+        </Stack>
+        <Divider />
+        <Stack spacing={0.75}>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <PaymentsIcon fontSize="small" />
+            <MRSTypography variant="body2">Precios y coberturas</MRSTypography>
+          </Stack>
+          <Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
+            <MRSTypography variant="body2">Cotizador</MRSTypography>
+          </Stack>
+          <Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
+            <MRSTypography variant="body2">Planes y seguros</MRSTypography>
+          </Stack>
+        </Stack>
+        <Divider />
+        <Stack spacing={0.75}>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <AccountCircleIcon fontSize="small" />
+            <MRSTypography variant="body2">Cuenta</MRSTypography>
+          </Stack>
+          <Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
+            <MRSTypography variant="body2">Mis datos</MRSTypography>
+          </Stack>
+        </Stack>
+      </Paper>
+
+      <Box sx={{ flex: 1, p: 3 }}>
+        <Card
+          elevation={1}
+          sx={{
+            maxWidth: 1043,
+            mx: 'auto',
+            borderRadius: theme.shape.md,
+          }}
+        >
+          <CardContent sx={{ p: 3, display: 'flex', flexDirection: 'column', gap: 3 }}>
+            <Stack spacing={1}>
+              <MRSTypography variant="h3">Typography</MRSTypography>
+              <MRSTypography variant="body2">Typography</MRSTypography>
+            </Stack>
+
+            <Stack direction="row" spacing={1} flexWrap="wrap" alignItems="center">
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                sx={{ borderRadius: theme.shape.rounded, minWidth: 128 }}
+              >
+                Label
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                size="large"
+                sx={{ borderRadius: theme.shape.rounded, minWidth: 128 }}
+              >
+                Label
+              </Button>
+              <Button
+                variant="text"
+                color="primary"
+                size="large"
+                sx={{ borderRadius: theme.shape.rounded, minWidth: 128 }}
+              >
+                Label
+              </Button>
+              <IconButton
+                size="medium"
+                color="primary"
+                sx={{
+                  bgcolor: 'action.disabledBackground',
+                  borderRadius: theme.shape.md,
+                  '&:hover': { bgcolor: 'action.disabledBackground' },
+                }}
+              >
+                <CircularProgress size={16} color="inherit" />
+              </IconButton>
+            </Stack>
+
+            <Stack direction="row" spacing={1} flexWrap="wrap" alignItems="center">
+              <Button
+                variant="contained"
+                color="primary"
+                size="medium"
+                sx={{ borderRadius: theme.shape.rounded }}
+              >
+                Label
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                size="medium"
+                sx={{ borderRadius: theme.shape.rounded }}
+              >
+                Label
+              </Button>
+              <Button size="medium" sx={{ borderRadius: theme.shape.rounded }}>
+                Label
+              </Button>
+              <IconButton
+                size="small"
+                sx={{
+                  bgcolor: 'action.disabledBackground',
+                  borderRadius: theme.shape.md,
+                  '&:hover': { bgcolor: 'action.disabledBackground' },
+                }}
+              >
+                <AddIcon fontSize="small" />
+              </IconButton>
+            </Stack>
+
+            <Tabs
+              value={tab}
+              onChange={(_, value) => setTab(value)}
+              textColor="primary"
+              indicatorColor="primary"
+              sx={{ minHeight: 36 }}
+            >
+              <Tab icon={<AddIcon fontSize="small" />} iconPosition="start" label="Tab" />
+              <Tab icon={<AddIcon fontSize="small" />} iconPosition="start" label="Tab" />
+              <Tab icon={<AddIcon fontSize="small" />} iconPosition="start" label="Tab" />
+              <Tab icon={<AddIcon fontSize="small" />} iconPosition="start" label="Tab" />
+            </Tabs>
+
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Checkbox defaultChecked color="primary" />
+              <Radio defaultChecked color="primary" />
+              <Switch defaultChecked color="primary" />
+            </Stack>
+
+            <Rating name="cheatsheet-rating" defaultValue={3.5} precision={0.5} />
+
+            <Stack direction="row" spacing={1} flexWrap="wrap" alignItems="center">
+              <Chip
+                label="Primary"
+                color="primary"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon sx={{ color: 'primary.contrastText' }} />}
+                sx={{ borderRadius: theme.shape.rounded }}
+              />
+              <Chip
+                label="Secondary"
+                color="secondary"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon />}
+                sx={{ borderRadius: theme.shape.rounded }}
+              />
+              <Chip
+                label="Error"
+                color="error"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon sx={{ color: 'error.contrastText' }} />}
+                sx={{ borderRadius: theme.shape.rounded }}
+              />
+              <Chip
+                label="Warning"
+                color="warning"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon sx={{ color: theme.palette.warning.contrastText }} />}
+                sx={{ borderRadius: theme.shape.rounded }}
+              />
+              <Chip
+                label="Info"
+                color="info"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon sx={{ color: 'info.contrastText' }} />}
+                sx={{ borderRadius: theme.shape.rounded }}
+              />
+            </Stack>
+
+            <Stack direction="row" spacing={1} flexWrap="wrap" alignItems="center">
+              <Chip
+                label="Deletable"
+                variant="filled"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon fontSize="small" />}
+                sx={{ borderRadius: theme.shape.rounded, bgcolor: 'action.selected' }}
+              />
+              <Chip
+                label={
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Badge
+                      overlap="circular"
+                      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                      badgeContent={
+                        <FiberManualRecordIcon
+                          fontSize="small"
+                          sx={{ color: theme.palette.success.main }}
+                        />
+                      }
+                    >
+                      <Avatar sx={{ bgcolor: 'success.light', width: 24, height: 24 }}>OP</Avatar>
+                    </Badge>
+                    Thumbnail
+                  </Stack>
+                }
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon fontSize="small" />}
+                sx={{ borderRadius: theme.shape.rounded, bgcolor: 'action.selected' }}
+              />
+              <Chip
+                label="Small"
+                size="small"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon fontSize="small" />}
+                sx={{ borderRadius: theme.shape.rounded, bgcolor: 'action.selected' }}
+              />
+              <Chip
+                label="Outlined"
+                variant="outlined"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon fontSize="small" />}
+                sx={{ borderRadius: theme.shape.rounded }}
+              />
+              <Chip
+                label="Default"
+                onDelete={() => {}}
+                deleteIcon={<CancelIcon fontSize="small" />}
+                sx={{ borderRadius: theme.shape.rounded, bgcolor: 'action.selected' }}
+              />
+            </Stack>
+
+            <Stack direction="row" spacing={3} flexWrap="wrap">
+              <Stack spacing={0.75} sx={{ minWidth: 180 }}>
+                <MRSTypography variant="caption" color="text.secondary">
+                  Label
+                </MRSTypography>
+                <MRSTypography variant="body1">Value</MRSTypography>
+                <Divider />
+              </Stack>
+              <Stack spacing={0.75} sx={{ minWidth: 180 }}>
+                <TextField label="Label" variant="filled" defaultValue="Value" fullWidth />
+              </Stack>
+              <Stack spacing={0.75} sx={{ minWidth: 180 }}>
+                <TextField label="Label" variant="outlined" defaultValue="Value" fullWidth />
+              </Stack>
+            </Stack>
+
+            <Stack direction="row" spacing={3} flexWrap="wrap">
+              <FormControl variant="standard" sx={{ minWidth: 180 }}>
+                <InputLabel id="standard-select">Label</InputLabel>
+                <Select
+                  labelId="standard-select"
+                  value={standardSelect}
+                  onChange={(e) => setStandardSelect(e.target.value)}
+                  IconComponent={ArrowDropDownIcon}
+                >
+                  <MenuItem value="Value">Value</MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
+                </Select>
+              </FormControl>
+              <FormControl variant="filled" sx={{ minWidth: 180 }}>
+                <InputLabel id="filled-select">Label</InputLabel>
+                <Select
+                  labelId="filled-select"
+                  value={filledSelect}
+                  onChange={(e) => setFilledSelect(e.target.value)}
+                  IconComponent={ArrowDropDownIcon}
+                >
+                  <MenuItem value="Value">Value</MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
+                </Select>
+              </FormControl>
+              <FormControl variant="outlined" sx={{ minWidth: 180 }}>
+                <InputLabel id="outlined-select">Label</InputLabel>
+                <Select
+                  labelId="outlined-select"
+                  value={outlinedSelect}
+                  onChange={(e) => setOutlinedSelect(e.target.value)}
+                  label="Label"
+                  IconComponent={ArrowDropDownIcon}
+                >
+                  <MenuItem value="Value">Value</MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
+                </Select>
+              </FormControl>
+            </Stack>
+
+            <Stack spacing={2} sx={{ width: '100%', maxWidth: 600 }}>
+              <Accordion defaultExpanded>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <MRSTypography variant="body1">Typography</MRSTypography>
+                  <MRSTypography variant="body1" color="text.secondary" sx={{ ml: 2 }}>
+                    Typography
+                  </MRSTypography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Paper
+                    variant="outlined"
+                    sx={{
+                      borderStyle: 'dashed',
+                      borderColor: '#9747FF',
+                      bgcolor: 'rgba(151,71,255,0.04)',
+                      p: 1.5,
+                      textAlign: 'center',
+                      color: '#9747FF',
+                      borderRadius: theme.shape.md,
+                    }}
+                  >
+                    Instance Slot
+                  </Paper>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <MRSTypography variant="body1">Typography</MRSTypography>
+                  <MRSTypography variant="body1" color="text.secondary" sx={{ ml: 2 }}>
+                    Typography
+                  </MRSTypography>
+                </AccordionSummary>
+              </Accordion>
+              <Accordion disabled>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <MRSTypography variant="body1" color="text.disabled">
+                    Typography
+                  </MRSTypography>
+                  <MRSTypography variant="body1" color="text.disabled" sx={{ ml: 2 }}>
+                    Typography
+                  </MRSTypography>
+                </AccordionSummary>
+              </Accordion>
+            </Stack>
+
+            <TableContainer
+              component={Paper}
+              elevation={1}
+              sx={{
+                borderRadius: theme.shape.md,
+                width: '100%',
+                maxWidth: 600,
+              }}
+            >
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    {Array.from({ length: 5 }).map((_, idx) => (
+                      <TableCell key={idx}>
+                        <MRSTypography variant="subtitle2">Head</MRSTypography>
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {tableRows.map((row) => (
+                    <TableRow key={row.id}>
+                      {row.cells.map((cell, idx) => (
+                        <TableCell key={`${row.id}-${idx}`}>
+                          <MRSTypography variant="body2">{cell}</MRSTypography>
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+              <Stack
+                direction="row"
+                spacing={1.5}
+                alignItems="center"
+                justifyContent="flex-end"
+                sx={{ p: 1.5 }}
+              >
+                <MRSTypography variant="caption" color="text.secondary">
+                  Rows per page:
+                </MRSTypography>
+                <Stack direction="row" alignItems="center" spacing={0.5}>
+                  <MRSTypography variant="caption">10</MRSTypography>
+                  <ArrowDropDownIcon fontSize="small" />
+                </Stack>
+                <MRSTypography variant="caption">1-5 of 13</MRSTypography>
+                <IconButton size="small">
+                  <AddIcon fontSize="small" />
+                </IconButton>
+                <IconButton size="small">
+                  <AddIcon fontSize="small" />
+                </IconButton>
+              </Stack>
+            </TableContainer>
+
+            <Stack spacing={2} sx={{ width: '100%', maxWidth: 600 }}>
+              <Alert
+                severity="error"
+                variant="filled"
+                title="{Title}"
+                description="{Description}"
+                close
+              />
+              <Alert
+                severity="error"
+                variant="outlined"
+                title="{Title}"
+                description="{Description}"
+              />
+              <Alert
+                severity="error"
+                variant="standard"
+                title="{Title}"
+                description="{Description}"
+                action={
+                  <Button size="small" variant="text" color="inherit">
+                    Label
+                  </Button>
+                }
+              />
+              <Alert
+                severity="warning"
+                variant="standard"
+                title="{Title}"
+                description="{Description}"
+                action={
+                  <Button size="small" variant="text" color="inherit">
+                    Label
+                  </Button>
+                }
+                close
+              />
+              <Alert
+                severity="info"
+                variant="standard"
+                title="{Title}"
+                description="{Description}"
+                action={
+                  <Button size="small" variant="text" color="inherit">
+                    Label
+                  </Button>
+                }
+                close
+              />
+              <Alert
+                severity="success"
+                variant="standard"
+                title="{Title}"
+                description="{Description}"
+                action={
+                  <Button size="small" variant="text" color="inherit">
+                    Label
+                  </Button>
+                }
+                close
+              />
+            </Stack>
+          </CardContent>
+        </Card>
+      </Box>
+    </Box>
+  );
+};
+
+<CheatsheetPage />
+

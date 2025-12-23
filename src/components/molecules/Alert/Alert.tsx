@@ -113,7 +113,7 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
           borderRadius: (theme.shape as any).xs,
           backgroundColor: tokenColors.background,
           color: tokenColors.foreground,
-          alignItems: 'flex-start',
+          alignItems: 'flex-justify',
           py: 1.5,
           px: 2,
           ...(variant === 'outlined' && {
@@ -121,18 +121,18 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
           }),
           '& .MuiAlert-icon': {
             color: tokenColors.foreground,
-            padding: 0,
+            padding: 1,
             marginRight: theme.spacing(1),
             mt: 0.25,
           },
           '& .MuiAlert-message': {
-            padding: 0,
+            padding: 1,
             width: '100%',
           },
           '& .MuiAlert-action': {
             padding: 0,
-            marginLeft: theme.spacing(1),
-            alignItems: 'flex-start',
+            marginLeft: theme.spacing(2),
+            alignItems: 'flex-justify',
           },
           ...sx,
         }}
