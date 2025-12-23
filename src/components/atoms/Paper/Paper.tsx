@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiPaper from '@mui/material/Paper';
-import { PaperProps } from './Paper.types';
+import type { PaperProps } from './Paper.types';
 
 /**
  * Paper component

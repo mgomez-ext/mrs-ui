@@ -2,7 +2,7 @@
  * Typography component type definitions
  */
 
-import { TypographyProps as MuiTypographyProps } from '@mui/material/Typography';
+import type { TypographyProps as MuiTypographyProps } from '@mui/material/Typography';
 
 /**
  * MRS Typography component props

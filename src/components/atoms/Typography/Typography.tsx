@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiTypography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
-import { TypographyProps } from './Typography.types';
+import type { TypographyProps } from './Typography.types';
 
 /**
  * Typography component

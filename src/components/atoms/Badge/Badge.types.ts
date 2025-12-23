@@ -2,7 +2,7 @@
  * Badge component type definitions
  */
 
-import { BadgeProps as MuiBadgeProps } from '@mui/material/Badge';
+import type { BadgeProps as MuiBadgeProps } from '@mui/material/Badge';
 
 /**
  * MRS Badge component props

@@ -2,7 +2,7 @@
  * Radio component type definitions
  */
 
-import { RadioProps as MuiRadioProps } from '@mui/material/Radio';
+import type { RadioProps as MuiRadioProps } from '@mui/material/Radio';
 
 /**
  * MRS Radio component props

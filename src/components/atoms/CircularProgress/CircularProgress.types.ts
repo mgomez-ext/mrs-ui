@@ -2,7 +2,7 @@
  * CircularProgress component type definitions
  */
 
-import { CircularProgressProps as MuiCircularProgressProps } from '@mui/material/CircularProgress';
+import type { CircularProgressProps as MuiCircularProgressProps } from '@mui/material/CircularProgress';
 
 /**
  * MRS CircularProgress component props

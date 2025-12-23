@@ -2,7 +2,7 @@
  * Skeleton component type definitions
  */
 
-import { SkeletonProps as MuiSkeletonProps } from '@mui/material/Skeleton';
+import type { SkeletonProps as MuiSkeletonProps } from '@mui/material/Skeleton';
 
 /**
  * MRS Skeleton component props

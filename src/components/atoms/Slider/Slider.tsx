@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiSlider from '@mui/material/Slider';
-import { SliderProps } from './Slider.types';
+import type { SliderProps } from './Slider.types';
 
 /**
  * Slider component

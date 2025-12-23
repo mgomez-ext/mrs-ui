@@ -2,8 +2,8 @@
  * Icon component type definitions
  */
 
-import { SvgIconProps } from '@mui/material/SvgIcon';
-import { IconProps as MuiIconProps } from '@mui/material/Icon';
+import type { SvgIconProps } from '@mui/material/SvgIcon';
+import type { IconProps as MuiIconProps } from '@mui/material/Icon';
 
 /**
  * Icon size options

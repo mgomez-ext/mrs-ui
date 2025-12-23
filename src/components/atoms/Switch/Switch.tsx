@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiSwitch from '@mui/material/Switch';
-import { SwitchProps } from './Switch.types';
+import type { SwitchProps } from './Switch.types';
 
 /**
  * Switch component

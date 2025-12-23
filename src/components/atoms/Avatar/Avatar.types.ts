@@ -2,8 +2,8 @@
  * Avatar component type definitions
  */
 
-import { AvatarProps as MuiAvatarProps } from '@mui/material/Avatar';
-import { ReactNode } from 'react';
+import type { AvatarProps as MuiAvatarProps } from '@mui/material/Avatar';
+import type { ReactNode } from 'react';
 
 /**
  * MRS Avatar component props

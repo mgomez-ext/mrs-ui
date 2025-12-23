@@ -2,7 +2,7 @@
  * Tooltip component type definitions
  */
 
-import { TooltipProps as MuiTooltipProps } from '@mui/material/Tooltip';
+import type { TooltipProps as MuiTooltipProps } from '@mui/material/Tooltip';
 
 /**
  * MRS Tooltip component props

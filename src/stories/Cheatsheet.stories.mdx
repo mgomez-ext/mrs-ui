@@ -66,20 +66,20 @@ export const CheatsheetPage = () => {
   const [outlinedSelect, setOutlinedSelect] = React.useState('Value');
 
 const navItems = [
-{ icon: <HomeOutlinedIcon fontSize="small" />, label: 'Inicio', active: true },
-{ icon: <CalendarTodayIcon fontSize="small" />, label: 'Citas' },
-{ icon: <FavoriteBorderIcon fontSize="small" />, label: 'Mi salud' },
-{ icon: <ReceiptLongIcon fontSize="small" />, label: 'Órdenes' },
-{ icon: <MedicalInformationIcon fontSize="small" />, label: 'Recetas' },
-{ icon: <HealingIcon fontSize="small" />, label: 'Resultados' },
-{ icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Cirugías' },
-{ icon: <HistoryIcon fontSize="small" />, label: 'Historial' },
-{ icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Salud preventiva' },
+  { icon: <HomeOutlinedIcon fontSize="small" />, label: 'Inicio', active: true },
+  { icon: <CalendarTodayIcon fontSize="small" />, label: 'Citas' },
+  { icon: <FavoriteBorderIcon fontSize="small" />, label: 'Mi salud' },
+  { icon: <ReceiptLongIcon fontSize="small" />, label: 'Órdenes' },
+  { icon: <MedicalInformationIcon fontSize="small" />, label: 'Recetas' },
+  { icon: <HealingIcon fontSize="small" />, label: 'Resultados' },
+  { icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Cirugías' },
+  { icon: <HistoryIcon fontSize="small" />, label: 'Historial' },
+  { icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Salud preventiva' },
 ];
 
-const tableRows = Array.from({ length: 5 }).map((\_, idx) => ({
-id: idx,
-cells: ['Cell', 'Cell', 'Cell', 'Cell', 'Cell'],
+const tableRows = Array.from({ length: 5 }).map((_, idx) => ({
+  id: idx,
+  cells: ['Cell', 'Cell', 'Cell', 'Cell', 'Cell'],
 }));
 
 return (
@@ -570,7 +570,8 @@ sx={{
             </Stack>
           </CardContent>
         </Card>
-    </Box>);
+      </Box>
+  );
 };
 
 <CheatsheetPage />

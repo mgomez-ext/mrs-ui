@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiTooltip from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
-import { TooltipProps } from './Tooltip.types';
+import type { TooltipProps } from './Tooltip.types';
 
 /**
  * Styled Tooltip with custom theme tokens

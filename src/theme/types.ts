@@ -3,7 +3,7 @@
  * Extends Material-UI theme with custom tokens
  */
 
-import { Theme as MuiTheme } from '@mui/material/styles';
+import type { Theme as MuiTheme } from '@mui/material/styles';
 
 /**
  * Custom palette extensions for component-specific tokens

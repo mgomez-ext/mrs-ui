@@ -14,7 +14,7 @@ import React from 'react';
 import MuiListItem from '@mui/material/ListItem';
 import MuiListItemButton from '@mui/material/ListItemButton';
 import { alpha, useTheme } from '@mui/material/styles';
-import { ListItemProps } from './ListItem.types';
+import type { ListItemProps } from './ListItem.types';
 
 /**
  * ListItem component

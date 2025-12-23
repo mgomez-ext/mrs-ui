@@ -2,7 +2,7 @@
  * Slider component type definitions
  */
 
-import { SliderProps as MuiSliderProps } from '@mui/material/Slider';
+import type { SliderProps as MuiSliderProps } from '@mui/material/Slider';
 
 /**
  * MRS Slider component props

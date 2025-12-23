@@ -34,6 +34,7 @@ export default defineConfig({
       formats: ['es', 'cjs'],
       fileName: (format) => `index.${format === 'es' ? 'mjs' : 'js'}`,
     },
+    copyPublicDir: false,
     rollupOptions: {
       external: [
         'react',

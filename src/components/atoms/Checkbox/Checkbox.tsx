@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiCheckbox from '@mui/material/Checkbox';
-import { CheckboxProps } from './Checkbox.types';
+import type { CheckboxProps } from './Checkbox.types';
 
 /**
  * Checkbox component

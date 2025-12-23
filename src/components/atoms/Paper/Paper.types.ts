@@ -2,8 +2,8 @@
  * Paper component type definitions
  */
 
-import { PaperProps as MuiPaperProps } from '@mui/material/Paper';
-import { ReactNode } from 'react';
+import type { PaperProps as MuiPaperProps } from '@mui/material/Paper';
+import type { ReactNode } from 'react';
 
 /**
  * MRS Paper component props

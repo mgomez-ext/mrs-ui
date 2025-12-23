@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiRadio from '@mui/material/Radio';
-import { RadioProps } from './Radio.types';
+import type { RadioProps } from './Radio.types';
 
 /**
  * Radio component

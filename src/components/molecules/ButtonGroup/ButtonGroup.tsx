@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiButtonGroup from '@mui/material/ButtonGroup';
-import { ButtonGroupProps } from './ButtonGroup.types';
+import type { ButtonGroupProps } from './ButtonGroup.types';
 
 /**
  * ButtonGroup component

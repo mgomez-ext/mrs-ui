@@ -2,8 +2,8 @@
  * ButtonGroup component type definitions
  */
 
-import { ButtonGroupProps as MuiButtonGroupProps } from '@mui/material/ButtonGroup';
-import { ReactNode } from 'react';
+import type { ButtonGroupProps as MuiButtonGroupProps } from '@mui/material/ButtonGroup';
+import type { ReactNode } from 'react';
 
 /**
  * MRS ButtonGroup component props

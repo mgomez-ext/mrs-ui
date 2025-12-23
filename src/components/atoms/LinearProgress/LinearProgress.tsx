@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiLinearProgress from '@mui/material/LinearProgress';
 import { Box, Typography } from '@mui/material';
-import { LinearProgressProps } from './LinearProgress.types';
+import type { LinearProgressProps } from './LinearProgress.types';
 
 /**
  * LinearProgress component

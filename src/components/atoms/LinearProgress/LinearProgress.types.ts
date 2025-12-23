@@ -2,7 +2,7 @@
  * LinearProgress component type definitions
  */
 
-import { LinearProgressProps as MuiLinearProgressProps } from '@mui/material/LinearProgress';
+import type { LinearProgressProps as MuiLinearProgressProps } from '@mui/material/LinearProgress';
 
 /**
  * MRS LinearProgress component props

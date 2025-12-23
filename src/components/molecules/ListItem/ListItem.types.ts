@@ -2,8 +2,8 @@
  * ListItem component type definitions
  */
 
-import { ListItemProps as MuiListItemProps } from '@mui/material/ListItem';
-import { ListItemButtonProps as MuiListItemButtonProps } from '@mui/material/ListItemButton';
+import type { ListItemProps as MuiListItemProps } from '@mui/material/ListItem';
+import type { ListItemButtonProps as MuiListItemButtonProps } from '@mui/material/ListItemButton';
 
 /**
  * MRS ListItem component props

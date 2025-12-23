@@ -2,7 +2,7 @@
  * Switch component type definitions
  */
 
-import { SwitchProps as MuiSwitchProps } from '@mui/material/Switch';
+import type { SwitchProps as MuiSwitchProps } from '@mui/material/Switch';
 
 /**
  * MRS Switch component props

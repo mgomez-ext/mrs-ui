@@ -2,8 +2,8 @@
  * Alert component type definitions
  */
 
-import { AlertProps as MuiAlertProps } from '@mui/material/Alert';
-import { ReactNode } from 'react';
+import type { AlertProps as MuiAlertProps } from '@mui/material/Alert';
+import type { ReactNode } from 'react';
 
 /**
  * Severity levels supported by the MRS Alert component.

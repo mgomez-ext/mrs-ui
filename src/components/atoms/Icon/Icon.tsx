@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiIcon from '@mui/material/Icon';
-import { IconProps, IconSvgProps, IconFontProps } from './Icon.types';
+import type { IconProps, IconSvgProps, IconFontProps } from './Icon.types';
 
 /**
  * Type guard to check if props are for SVG icon

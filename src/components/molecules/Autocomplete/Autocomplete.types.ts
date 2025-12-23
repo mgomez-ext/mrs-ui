@@ -2,7 +2,7 @@
  * Autocomplete component type definitions
  */
 
-import { AutocompleteProps as MuiAutocompleteProps } from '@mui/material/Autocomplete';
+import type { AutocompleteProps as MuiAutocompleteProps } from '@mui/material/Autocomplete';
 
 /**
  * MRS Autocomplete component props

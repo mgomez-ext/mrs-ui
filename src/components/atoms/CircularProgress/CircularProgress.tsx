@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiCircularProgress from '@mui/material/CircularProgress';
 import { Box, Typography } from '@mui/material';
-import { CircularProgressProps } from './CircularProgress.types';
+import type { CircularProgressProps } from './CircularProgress.types';
 
 /**
  * CircularProgress component

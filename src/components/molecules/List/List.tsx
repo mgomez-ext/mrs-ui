@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiList from '@mui/material/List';
-import { ListProps } from './List.types';
+import type { ListProps } from './List.types';
 
 /**
  * List component

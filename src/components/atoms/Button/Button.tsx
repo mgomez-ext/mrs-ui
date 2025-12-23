@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiButton from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
-import { ButtonProps } from './Button.types';
+import type { ButtonProps } from './Button.types';
 
 /**
  * Button component

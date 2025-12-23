@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiSkeleton from '@mui/material/Skeleton';
-import { SkeletonProps } from './Skeleton.types';
+import type { SkeletonProps } from './Skeleton.types';
 
 /**
  * Skeleton component

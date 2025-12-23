@@ -2,7 +2,7 @@
  * Button component type definitions
  */
 
-import { ButtonProps as MuiButtonProps } from '@mui/material/Button';
+import type { ButtonProps as MuiButtonProps } from '@mui/material/Button';
 
 /**
  * MRS Button component props

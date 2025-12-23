@@ -10,7 +10,7 @@
 
 import React from 'react';
 import MuiChip from '@mui/material/Chip';
-import { ChipProps } from './Chip.types';
+import type { ChipProps } from './Chip.types';
 
 /**
  * Chip component

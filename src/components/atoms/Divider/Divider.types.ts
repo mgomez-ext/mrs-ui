@@ -2,7 +2,7 @@
  * Divider component type definitions
  */
 
-import { DividerProps as MuiDividerProps } from '@mui/material/Divider';
+import type { DividerProps as MuiDividerProps } from '@mui/material/Divider';
 
 /**
  * MRS Divider component props

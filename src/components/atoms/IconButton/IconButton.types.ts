@@ -2,7 +2,7 @@
  * IconButton component type definitions
  */
 
-import { IconButtonProps as MuiIconButtonProps } from '@mui/material/IconButton';
+import type { IconButtonProps as MuiIconButtonProps } from '@mui/material/IconButton';
 
 /**
  * MRS IconButton component props

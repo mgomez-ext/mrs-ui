@@ -2,7 +2,7 @@
  * List component type definitions
  */
 
-import { ListProps as MuiListProps } from '@mui/material/List';
+import type { ListProps as MuiListProps } from '@mui/material/List';
 
 /**
  * MRS List component props

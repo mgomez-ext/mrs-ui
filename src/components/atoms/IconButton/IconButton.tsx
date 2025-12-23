@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiIconButton from '@mui/material/IconButton';
 import { useTheme } from '@mui/material/styles';
-import { IconButtonProps } from './IconButton.types';
+import type { IconButtonProps } from './IconButton.types';
 
 /**
  * IconButton component

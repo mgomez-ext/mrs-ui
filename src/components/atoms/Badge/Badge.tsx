@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiBadge from '@mui/material/Badge';
 import { useTheme } from '@mui/material/styles';
-import { BadgeProps } from './Badge.types';
+import type { BadgeProps } from './Badge.types';
 
 /**
  * Badge component

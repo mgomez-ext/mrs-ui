@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiAvatar from '@mui/material/Avatar';
 import { useTheme } from '@mui/material/styles';
-import { AvatarProps } from './Avatar.types';
+import type { AvatarProps } from './Avatar.types';
 
 /**
  * Avatar component

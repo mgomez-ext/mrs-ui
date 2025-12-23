@@ -12,7 +12,7 @@
 import React from 'react';
 import MuiDivider from '@mui/material/Divider';
 import { useTheme } from '@mui/material/styles';
-import { DividerProps } from './Divider.types';
+import type { DividerProps } from './Divider.types';
 
 /**
  * Divider component

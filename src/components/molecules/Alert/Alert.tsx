@@ -23,7 +23,7 @@ import CheckCircleRounded from '@mui/icons-material/CheckCircleRounded';
 import CheckCircleOutlineRounded from '@mui/icons-material/CheckCircleOutlineRounded';
 import CloseRounded from '@mui/icons-material/CloseRounded';
 import { Icon } from '../../atoms/Icon';
-import { AlertProps, AlertSeverity, AlertVariant } from './Alert.types';
+import type { AlertProps, AlertSeverity, AlertVariant } from './Alert.types';
 
 type AlertColorTokens = {
   background: string;
@@ -44,7 +44,7 @@ const severityIcons: Record<AlertSeverity, { filled: React.ComponentType; outlin
 function useAlertColors(severity: AlertSeverity, variant: AlertVariant): AlertColorTokens {
   const theme = useTheme();
   const tokens = theme.palette._components.alert[severity][variant];
-  return tokens as AlertColorTokens;
+  return tokens;
 }
 
 export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
@@ -110,7 +110,7 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
         icon={startIcon}
         action={actionContent}
         sx={{
-          borderRadius: (theme.shape as any).xs,
+          borderRadius: theme.shape.borderRadius,
           backgroundColor: tokenColors.background,
           color: tokenColors.foreground,
           alignItems: 'flex-justify',

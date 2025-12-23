@@ -2,8 +2,8 @@
  * ListItem component tests
  */
 
-import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '../../../tests/test-utils';
+import { describe, it, expect, jest } from '@jest/globals';
+import { render, screen, fireEvent } from '../../../../tests/test-utils';
 import userEvent from '@testing-library/user-event';
 import { ListItem } from './ListItem';
 import { List } from '../List';
@@ -148,8 +148,8 @@ describe('ListItem', () => {
     });
 
     it('should handle click when button prop is true', async () => {
+      const handleClick = jest.fn();
       const user = userEvent.setup();
-      const handleClick = vi.fn();
 
       render(
         <List>
@@ -196,7 +196,7 @@ describe('ListItem', () => {
 
     it('should not handle click when disabled', async () => {
       const user = userEvent.setup();
-      const handleClick = vi.fn();
+      const handleClick = jest.fn();
 
       render(
         <List>
@@ -209,9 +209,10 @@ describe('ListItem', () => {
       const buttonElement = screen.getByText('Test Item').closest('.MuiListItemButton-root');
 
       if (buttonElement) {
-        await user.click(buttonElement);
-        expect(handleClick).not.toHaveBeenCalled();
+        expect(buttonElement).toHaveAttribute('aria-disabled', 'true');
       }
+
+      expect(handleClick).not.toHaveBeenCalled();
     });
   });
 

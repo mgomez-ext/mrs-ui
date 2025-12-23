@@ -2,7 +2,7 @@
  * Checkbox component type definitions
  */
 
-import { CheckboxProps as MuiCheckboxProps } from '@mui/material/Checkbox';
+import type { CheckboxProps as MuiCheckboxProps } from '@mui/material/Checkbox';
 
 /**
  * MRS Checkbox component props

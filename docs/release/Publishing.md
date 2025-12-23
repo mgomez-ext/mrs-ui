@@ -14,6 +14,7 @@ npm run type-check
 ```bash
 npm test
 npm run lint
+# optional: npm run format:check
 ```
 
 4) **Build artifacts**
@@ -22,11 +23,17 @@ npm run build
 ```
 Outputs ESM (`dist/index.mjs`), CJS (`dist/index.js`), and type declarations.
 
-5) **Update changelog + version**
+5) **Validate package contents**
+```bash
+npm pack --dry-run
+```
+Ensure `dist/` is present and `src/`, `tests/`, `.storybook/` are excluded.
+
+6) **Update changelog + version**
 - Edit `CHANGELOG.md`.
 - Choose bump: `npm run publish:patch|minor|major` (uses `prepublishOnly` → type-check + build).
 
-6) **Publish**
+7) **Publish**
 ```bash
 npm publish --access=restricted
 ```

@@ -11,7 +11,7 @@
 import React from 'react';
 import MuiAutocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
-import { AutocompleteProps } from './Autocomplete.types';
+import type { AutocompleteProps } from './Autocomplete.types';
 import { Chip } from '../../atoms/Chip';
 
 /**

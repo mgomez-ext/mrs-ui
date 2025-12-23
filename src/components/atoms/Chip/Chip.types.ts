@@ -2,8 +2,8 @@
  * Chip component type definitions
  */
 
-import { ChipProps as MuiChipProps } from '@mui/material/Chip';
-import { ReactElement } from 'react';
+import type { ChipProps as MuiChipProps } from '@mui/material/Chip';
+import type { ReactElement } from 'react';
 
 /**
  * MRS Chip component props

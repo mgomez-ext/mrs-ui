@@ -2,8 +2,8 @@
  * List component tests
  */
 
-import { describe, it, expect } from 'vitest';
-import { render, screen } from '../../../tests/test-utils';
+import { describe, it, expect } from '@jest/globals';
+import { render, screen } from '../../../../tests/test-utils';
 import { List } from './List';
 import { ListItem } from '../ListItem';
 import { ListItemText, ListSubheader } from '@mui/material';
