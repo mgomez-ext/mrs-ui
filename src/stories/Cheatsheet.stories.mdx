@@ -65,35 +65,34 @@ export const CheatsheetPage = () => {
   const [filledSelect, setFilledSelect] = React.useState('Value');
   const [outlinedSelect, setOutlinedSelect] = React.useState('Value');
 
-  const navItems = [
-    { icon: <HomeOutlinedIcon fontSize="small" />, label: 'Inicio', active: true },
-    { icon: <CalendarTodayIcon fontSize="small" />, label: 'Citas' },
-    { icon: <FavoriteBorderIcon fontSize="small" />, label: 'Mi salud' },
-    { icon: <ReceiptLongIcon fontSize="small" />, label: 'Órdenes' },
-    { icon: <MedicalInformationIcon fontSize="small" />, label: 'Recetas' },
-    { icon: <HealingIcon fontSize="small" />, label: 'Resultados' },
-    { icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Cirugías' },
-    { icon: <HistoryIcon fontSize="small" />, label: 'Historial' },
-    { icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Salud preventiva' },
-  ];
+const navItems = [
+{ icon: <HomeOutlinedIcon fontSize="small" />, label: 'Inicio', active: true },
+{ icon: <CalendarTodayIcon fontSize="small" />, label: 'Citas' },
+{ icon: <FavoriteBorderIcon fontSize="small" />, label: 'Mi salud' },
+{ icon: <ReceiptLongIcon fontSize="small" />, label: 'Órdenes' },
+{ icon: <MedicalInformationIcon fontSize="small" />, label: 'Recetas' },
+{ icon: <HealingIcon fontSize="small" />, label: 'Resultados' },
+{ icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Cirugías' },
+{ icon: <HistoryIcon fontSize="small" />, label: 'Historial' },
+{ icon: <HealthAndSafetyIcon fontSize="small" />, label: 'Salud preventiva' },
+];
 
-  const tableRows = Array.from({ length: 5 }).map((_, idx) => ({
-    id: idx,
-    cells: ['Cell', 'Cell', 'Cell', 'Cell', 'Cell'],
-  }));
+const tableRows = Array.from({ length: 5 }).map((\_, idx) => ({
+id: idx,
+cells: ['Cell', 'Cell', 'Cell', 'Cell', 'Cell'],
+}));
 
-  return (
-    <Box
-      sx={{
+return (
+<Box
+sx={{
         bgcolor: 'background.default',
         minHeight: '100vh',
         display: 'flex',
-      }}
-    >
-      <Paper
-        elevation={1}
-        square
-        sx={{
+      }} >
+<Paper
+elevation={1}
+square
+sx={{
           width: 240,
           p: 2,
           display: 'flex',
@@ -101,25 +100,22 @@ export const CheatsheetPage = () => {
           gap: 2,
           borderRight: `1px solid ${theme.palette.divider}`,
           bgcolor: 'background.paper',
-        }}
-      >
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          fullWidth
-          sx={{ borderRadius: theme.shape.md }}
-        >
-          + Agendar
-        </Button>
-        <Stack spacing={0.5}>
-          {navItems.map((item) => (
-            <Stack
-              key={item.label}
-              direction="row"
-              spacing={1}
-              alignItems="center"
-              sx={{
+        }} >
+<Button
+variant="contained"
+color="primary"
+size="large"
+fullWidth
+sx={{ borderRadius: theme.shape.md }} > + Agendar
+</Button>
+<Stack spacing={0.5}>
+{navItems.map((item) => (
+<Stack
+key={item.label}
+direction="row"
+spacing={1}
+alignItems="center"
+sx={{
                 px: 1.25,
                 py: 0.75,
                 borderRadius: theme.shape.sm,
@@ -127,37 +123,36 @@ export const CheatsheetPage = () => {
                 color: item.active ? 'text.primary' : 'text.secondary',
                 fontWeight: item.active ? 600 : 400,
                 cursor: 'default',
-              }}
-            >
-              {item.icon}
-              <MRSTypography variant="body2">{item.label}</MRSTypography>
-            </Stack>
-          ))}
-        </Stack>
-        <Divider />
-        <Stack spacing={0.75}>
-          <Stack direction="row" spacing={1} alignItems="center">
-            <PaymentsIcon fontSize="small" />
-            <MRSTypography variant="body2">Precios y coberturas</MRSTypography>
-          </Stack>
-          <Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
-            <MRSTypography variant="body2">Cotizador</MRSTypography>
-          </Stack>
-          <Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
-            <MRSTypography variant="body2">Planes y seguros</MRSTypography>
-          </Stack>
-        </Stack>
-        <Divider />
-        <Stack spacing={0.75}>
-          <Stack direction="row" spacing={1} alignItems="center">
-            <AccountCircleIcon fontSize="small" />
-            <MRSTypography variant="body2">Cuenta</MRSTypography>
-          </Stack>
-          <Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
-            <MRSTypography variant="body2">Mis datos</MRSTypography>
-          </Stack>
-        </Stack>
-      </Paper>
+              }} >
+{item.icon}
+<MRSTypography variant="body2">{item.label}</MRSTypography>
+</Stack>
+))}
+</Stack>
+<Divider />
+<Stack spacing={0.75}>
+<Stack direction="row" spacing={1} alignItems="center">
+<PaymentsIcon fontSize="small" />
+<MRSTypography variant="body2">Precios y coberturas</MRSTypography>
+</Stack>
+<Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
+<MRSTypography variant="body2">Cotizador</MRSTypography>
+</Stack>
+<Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
+<MRSTypography variant="body2">Planes y seguros</MRSTypography>
+</Stack>
+</Stack>
+<Divider />
+<Stack spacing={0.75}>
+<Stack direction="row" spacing={1} alignItems="center">
+<AccountCircleIcon fontSize="small" />
+<MRSTypography variant="body2">Cuenta</MRSTypography>
+</Stack>
+<Stack direction="row" spacing={1} alignItems="center" sx={{ pl: 3 }}>
+<MRSTypography variant="body2">Mis datos</MRSTypography>
+</Stack>
+</Stack>
+</Paper>
 
       <Box sx={{ flex: 1, p: 3 }}>
         <Card
@@ -575,9 +570,7 @@ export const CheatsheetPage = () => {
             </Stack>
           </CardContent>
         </Card>
-      </Box>
-    </Box>
-  );
+    </Box>);
 };
 
 <CheatsheetPage />

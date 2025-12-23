@@ -69,8 +69,7 @@ export const WithoutIcon: Story = {
   render: () => (
     <Stack spacing={2}>
       <Alert severity="error" variant="filled" icon={false} title="No icon" description="Filled" />
-      <Alerty
-      
+      <Alert
         severity="info"
         variant="outlined"
         icon={false}
