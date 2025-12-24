@@ -37,3 +37,6 @@ yarn-error.log*
 
 
 *storybook.log
+
+src/stories/generated
+src/stories/StoryUI/
