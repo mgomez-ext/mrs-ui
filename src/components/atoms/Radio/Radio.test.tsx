@@ -19,7 +19,7 @@ describe('Radio', () => {
     const { container } = render(
       <Radio size="medium" inputProps={{ 'aria-label': 'Medium radio' }} />
     );
-    const radio = screen.getByRole('radio', { name: 'Medium radio' });
+    screen.getByRole('radio', { name: 'Medium radio' });
     const radioWrapper = container.querySelector('.MuiRadio-root');
     expect(radioWrapper).toBeInTheDocument();
     // Medium size is the default and might not have a specific size class

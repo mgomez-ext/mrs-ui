@@ -195,7 +195,7 @@ describe('Alert', () => {
     });
 
     it('renders close button with correct icon', () => {
-      const { container } = renderWithTheme(<Alert title="Alert" close />);
+      renderWithTheme(<Alert title="Alert" close />);
       const closeButton = screen.getByLabelText('close');
       const icon = closeButton.querySelector('svg');
       expect(icon).toBeInTheDocument();

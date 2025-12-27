@@ -129,7 +129,7 @@ describe('Chip', () => {
   });
 
   it('renders with custom icon', () => {
-    const { container } = render(
+    render(
       <Chip label="Icon Chip" icon={<span data-testid="custom-icon">🎨</span>} />
     );
     expect(screen.getByTestId('custom-icon')).toBeInTheDocument();

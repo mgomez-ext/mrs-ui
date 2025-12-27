@@ -3,7 +3,7 @@
  */
 
 import { describe, it, expect, jest } from '@jest/globals';
-import { render, screen, fireEvent } from '../../../../tests/test-utils';
+import { render, screen } from '../../../../tests/test-utils';
 import userEvent from '@testing-library/user-event';
 import { ListItem } from './ListItem';
 import { List } from '../List';
@@ -195,7 +195,7 @@ describe('ListItem', () => {
     });
 
     it('should not handle click when disabled', async () => {
-      const user = userEvent.setup();
+      const _user = userEvent.setup();
       const handleClick = jest.fn();
 
       render(

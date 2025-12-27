@@ -99,7 +99,7 @@ describe('Autocomplete', () => {
   });
 
   it('displays chips for selected values in multiple mode', async () => {
-    const user = userEvent.setup();
+    const _user = userEvent.setup();
     render(
       <Autocomplete
         options={options}
