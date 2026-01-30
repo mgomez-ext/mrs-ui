@@ -210,24 +210,24 @@ src/components/**/
 
 ### Main Entry Point
 ```typescript
-import { Button, TextField, ... } from '@atipicus/mrs-ui';
+import { Button, TextField, ... } from '@mgomez-ext/mrs-ui';
 ```
 **Bundle**: 123 KB (gzipped)
 
 ### Lazy Loading Entry
 ```typescript
-import { LazyTable, LazyDialog, ... } from '@atipicus/mrs-ui/lazy';
+import { LazyTable, LazyDialog, ... } from '@mgomez-ext/mrs-ui/lazy';
 ```
 **Bundle**: 0.6 KB (gzipped) + chunks on-demand
 
 ### Theme Entry
 ```typescript
-import { theme, colors, shape } from '@atipicus/mrs-ui/theme';
+import { theme, colors, shape } from '@mgomez-ext/mrs-ui/theme';
 ```
 
 ### Tokens Entry
 ```typescript
-import { PrimaryMain, ... } from '@atipicus/mrs-ui/tokens';
+import { PrimaryMain, ... } from '@mgomez-ext/mrs-ui/tokens';
 ```
 
 ---
@@ -298,7 +298,7 @@ Bundle Size:
 
 ### What's Public
 
-✅ npm package (`@atipicus/mrs-ui`)
+✅ npm package (`@mgomez-ext/mrs-ui`)
 ✅ GitHub repository (public)
 ✅ Storybook documentation (public)
 ✅ Component source code

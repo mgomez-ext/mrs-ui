@@ -332,7 +332,7 @@ Antes de crear un PR con cambios de tokens:
 ¿Preguntas sobre tokens?
 
 - Slack: `#design-system`
-- Issues: [GitHub Issues](https://github.com/Atipicus/mrs-ui/issues)
+- Issues: [GitHub Issues](https://github.com/mgomez-ext/mrs-ui/issues)
 - Docs: `TOKENS-SYNC-WORKFLOW.md`
 
 ---

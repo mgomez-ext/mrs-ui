@@ -6,7 +6,7 @@
  *
  * @example
  * ```typescript
- * import * as tokens from '@atipicus/mrs-ui/tokens';
+ * import * as tokens from '@mgomez-ext/mrs-ui/tokens';
  *
  * // Access token values
  * const brandColor = tokens.PrimitivesColorsBrandVerones;

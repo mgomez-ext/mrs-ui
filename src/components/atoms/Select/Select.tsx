@@ -10,6 +10,7 @@
 import React from 'react';
 import MuiSelect from '@mui/material/Select';
 import type { Theme } from '@mui/material/styles';
+import { shapeTokens } from '@theme/tokens-import';
 import type { SelectProps } from './Select.types';
 
 /**
@@ -60,11 +61,11 @@ export const Select = React.forwardRef<any, SelectProps>(
         fullWidth={fullWidth}
         sx={{
           fontFamily: (theme: Theme) => theme.typography.fontFamily,
-          borderRadius: (theme: Theme) => theme.shape.lg,
+          borderRadius: shapeTokens.lg,
           // Outlined variant specific styles
           ...(variant === 'outlined' && {
             '& .MuiOutlinedInput-root': {
-              borderRadius: (theme: Theme) => theme.shape.lg,
+              borderRadius: shapeTokens.lg,
             },
             '& .MuiOutlinedInput-notchedOutline': {
               borderColor: (theme: Theme) =>

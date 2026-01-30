@@ -8,16 +8,16 @@
 
 ## 📦 Package Information
 
-### NPM Package
-- **Package Name:** `@atipicus/mrs-ui`
+### GitHub Packages
+- **Package Name:** `@mgomez-ext/mrs-ui`
 - **Version:** 0.10.2
-- **Registry:** npm (public)
+- **Registry:** GitHub Packages
 - **Bundle Size:** 403.52 KB (gzipped)
 
 ### Repository
-- **GitHub:** https://github.com/Atipicus/mrs-ui
-- **Storybook:** https://atipicus.github.io/mrs-ui/
-- **Issues:** https://github.com/Atipicus/mrs-ui/issues
+- **GitHub:** https://github.com/mgomez-ext/mrs-ui
+- **Storybook:** https://mgomez-ext.github.io/mrs-ui/
+- **Issues:** https://github.com/mgomez-ext/mrs-ui/issues
 
 ---
 
@@ -25,7 +25,7 @@
 
 ### ✅ Storybook Deployment
 **Status:** LIVE
-**URL:** https://atipicus.github.io/mrs-ui/
+**URL:** https://mgomez-ext.github.io/mrs-ui/
 
 Storybook has been successfully deployed to GitHub Pages with:
 - ✅ All 54 component stories
@@ -36,7 +36,7 @@ Storybook has been successfully deployed to GitHub Pages with:
 - ✅ Mobile-responsive preview
 
 **To access:**
-1. Visit https://atipicus.github.io/mrs-ui/
+1. Visit https://mgomez-ext.github.io/mrs-ui/
 2. Browse components by category (Atoms, Molecules)
 3. Test component variants and props
 4. View code examples
@@ -49,7 +49,7 @@ Storybook has been successfully deployed to GitHub Pages with:
 ### Basic Installation
 
 ```bash
-npm install @atipicus/mrs-ui
+npm install @mgomez-ext/mrs-ui
 ```
 
 ### Peer Dependencies
@@ -62,7 +62,7 @@ npm install @mui/material @emotion/react @emotion/styled react react-dom
 
 ```bash
 # Install the package
-npm install @atipicus/mrs-ui
+npm install @mgomez-ext/mrs-ui
 
 # Install peer dependencies
 npm install @mui/material @emotion/react @emotion/styled
@@ -78,9 +78,9 @@ npm install react react-dom
 ### 1. Basic Usage
 
 ```tsx
-import { Button, TextField, Container } from '@atipicus/mrs-ui';
+import { Button, TextField, Container } from '@mgomez-ext/mrs-ui';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from '@atipicus/mrs-ui/theme';
+import { theme } from '@mgomez-ext/mrs-ui/theme';
 
 function App() {
   return (
@@ -97,7 +97,7 @@ function App() {
 ### 2. Using Design Tokens
 
 ```tsx
-import { tokens } from '@atipicus/mrs-ui/tokens';
+import { tokens } from '@mgomez-ext/mrs-ui/tokens';
 
 // Use tokens directly
 const MyComponent = () => (
@@ -113,7 +113,7 @@ const MyComponent = () => (
 ### 3. Grid Component (New v2 API)
 
 ```tsx
-import { Grid } from '@atipicus/mrs-ui';
+import { Grid } from '@mgomez-ext/mrs-ui';
 
 function ResponsiveLayout() {
   return (
@@ -178,18 +178,18 @@ npm publish
 
 1. **Verify Publication**
    ```bash
-   npm view @atipicus/mrs-ui version
+   npm view @mgomez-ext/mrs-ui version
    # Should show: 0.10.2
    ```
 
 2. **Test Installation**
    ```bash
    # In a test project
-   npm install @atipicus/mrs-ui@0.10.2
+   npm install @mgomez-ext/mrs-ui@0.10.2
    ```
 
 3. **Update GitHub Release**
-   - Go to https://github.com/Atipicus/mrs-ui/releases
+   - Go to https://github.com/mgomez-ext/mrs-ui/releases
    - Create new release with tag `v0.10.2`
    - Copy CHANGELOG content to release notes
 
@@ -319,16 +319,16 @@ Before any deployment, ensure:
 ## 📚 Documentation Links
 
 ### For Developers
-- **GitHub Repository:** https://github.com/Atipicus/mrs-ui
-- **Storybook:** https://atipicus.github.io/mrs-ui/
+- **GitHub Repository:** https://github.com/mgomez-ext/mrs-ui
+- **Storybook:** https://mgomez-ext.github.io/mrs-ui/
 - **CHANGELOG:** [CHANGELOG.md](./CHANGELOG.md)
 - **Contributing Guide:** [CONTRIBUTING.md](./CONTRIBUTING.md)
 - **Debug Report:** [DEBUG-TODO.md](./DEBUG-TODO.md)
 
 ### For Consumers
-- **NPM Package:** https://www.npmjs.com/package/@atipicus/mrs-ui
+- **GitHub Packages:** https://github.com/mgomez-ext/mrs-ui/packages
 - **Installation Guide:** [README.md](./README.md)
-- **Component Docs:** https://atipicus.github.io/mrs-ui/
+- **Component Docs:** https://mgomez-ext.github.io/mrs-ui/
 - **Design Tokens:** [TOKENS.md](./TOKENS.md)
 - **Theme Guide:** [THEME_ARCHITECTURE.md](./THEME_ARCHITECTURE.md)
 
@@ -371,7 +371,7 @@ npm login
 ### Support
 
 For issues or questions:
-- Open an issue: https://github.com/Atipicus/mrs-ui/issues
+- Open an issue: https://github.com/mgomez-ext/mrs-ui/issues
 - Check existing issues for solutions
 - Review documentation in `/docs` folder
 

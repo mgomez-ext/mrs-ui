@@ -2,7 +2,7 @@
 
 A cromprehensive design system Based on Material UI, with 53 production ready React components and TypeScript support...
 
-**📚 [View Component Documentation →](https://atipicus.github.io/mrs-ui/)**
+**📚 [View Component Documentation →](https://mgomez-ext.github.io/mrs-ui/)**
 
 ## 🚀 Features
 
@@ -22,7 +22,7 @@ A cromprehensive design system Based on Material UI, with 53 production ready Re
 ## 📦 Installation
 
 ```bash
-npm install @atipicus/mrs-ui
+npm install @mgomez-ext/mrs-ui
 ```
 
 ### Peer Dependencies
@@ -47,7 +47,7 @@ Add Nunito font to your HTML `<head>`:
 ## 🎯 Quick Start
 
 ```tsx
-import { Button, TextField, Container, Stack, ThemeProvider, theme } from '@atipicus/mrs-ui';
+import { Button, TextField, Container, Stack, ThemeProvider, theme } from '@mgomez-ext/mrs-ui';
 import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
@@ -73,8 +73,8 @@ Optimize bundle size by loading heavy components on-demand:
 
 ```tsx
 import { Suspense } from 'react';
-import { CircularProgress } from '@atipicus/mrs-ui';
-import { LazyTable, LazyDatePicker } from '@atipicus/mrs-ui/lazy';
+import { CircularProgress } from '@mgomez-ext/mrs-ui';
+import { LazyTable, LazyDatePicker } from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense fallback={<CircularProgress />}>
   <LazyTable /> {/* Saves 70 KB */}
@@ -96,25 +96,25 @@ Access 470+ design tokens in multiple formats:
 
 ```tsx
 // TypeScript
-import { colors, shape, typography } from '@atipicus/mrs-ui/theme';
+import { colors, shape, typography } from '@mgomez-ext/mrs-ui/theme';
 
 // CSS Variables
-@import '@atipicus/mrs-ui/tokens/generated/css/tokens.css';
+@import '@mgomez-ext/mrs-ui/tokens/generated/css/tokens.css';
 
 // SCSS Variables
-@import '@atipicus/mrs-ui/tokens/generated/scss/tokens';
+@import '@mgomez-ext/mrs-ui/tokens/generated/scss/tokens';
 ```
 
 ## 📖 Documentation
 
-- **[Component Documentation](https://atipicus.github.io/mrs-ui/)** - Interactive Storybook
-- **[API Reference](https://github.com/Atipicus/mrs-ui/blob/main/docs/API-REFERENCE.md)** - Complete API
-- **[Lazy Loading Guide](https://github.com/Atipicus/mrs-ui/blob/main/docs/guides/LazyLoading.md)** - Bundle optimization
-- **[Best Practices](https://github.com/Atipicus/mrs-ui/blob/main/docs/BEST-PRACTICES.md)** - Development patterns
+- **[Component Documentation](https://mgomez-ext.github.io/mrs-ui/)** - Interactive Storybook
+- **[API Reference](https://github.com/mgomez-ext/mrs-ui/blob/main/docs/API-REFERENCE.md)** - Complete API
+- **[Lazy Loading Guide](https://github.com/mgomez-ext/mrs-ui/blob/main/docs/guides/LazyLoading.md)** - Bundle optimization
+- **[Best Practices](https://github.com/mgomez-ext/mrs-ui/blob/main/docs/BEST-PRACTICES.md)** - Development patterns
 
 ## 🤝 Contributing
 
-We welcome contributions! See our [Contributing Guide](https://github.com/Atipicus/mrs-ui/blob/main/CONTRIBUTING.md).
+We welcome contributions! See our [Contributing Guide](https://github.com/mgomez-ext/mrs-ui/blob/main/CONTRIBUTING.md).
 
 ## 📝 License
 
@@ -122,9 +122,9 @@ UNLICENSED - This project is proprietary software.
 
 ## 🔗 Links
 
-- [npm Package](https://www.npmjs.com/package/@atipicus/mrs-ui)
-- [Storybook Documentation](https://atipicus.github.io/mrs-ui/)
-- [GitHub Repository](https://github.com/Atipicus/mrs-ui)
+- [GitHub Packages](https://github.com/mgomez-ext/mrs-ui/packages)
+- [Storybook Documentation](https://mgomez-ext.github.io/mrs-ui/)
+- [GitHub Repository](https://github.com/mgomez-ext/mrs-ui)
 
 ---
 

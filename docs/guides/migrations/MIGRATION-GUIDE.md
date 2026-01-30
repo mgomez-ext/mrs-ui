@@ -25,7 +25,7 @@
 
 ```bash
 npm uninstall @mui/material @mui/icons-material
-npm install @atipicus/mrs-ui
+npm install @mgomez-ext/mrs-ui
 ```
 
 ### 2. Update Imports
@@ -37,7 +37,7 @@ import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // ✅ After (MRS UI)
-import { Button, TextField, theme, ThemeProvider } from '@atipicus/mrs-ui';
+import { Button, TextField, theme, ThemeProvider } from '@mgomez-ext/mrs-ui';
 ```
 
 ### 3. Replace Theme Provider
@@ -61,7 +61,7 @@ function App() {
 }
 
 // ✅ After
-import { ThemeProvider, theme } from '@atipicus/mrs-ui';
+import { ThemeProvider, theme } from '@mgomez-ext/mrs-ui';
 
 function App() {
   return (
@@ -88,7 +88,7 @@ function App() {
     "@emotion/styled": "^11.0.0",
 
     // Add this:
-    "@atipicus/mrs-ui": "^0.12.0"
+    "@mgomez-ext/mrs-ui": "^0.12.0"
   }
 }
 ```
@@ -99,17 +99,17 @@ function App() {
 
 | Find | Replace |
 |------|---------|
-| `from '@mui/material/Button'` | `from '@atipicus/mrs-ui'` |
-| `from '@mui/material/TextField'` | `from '@atipicus/mrs-ui'` |
-| `from '@mui/material'` | `from '@atipicus/mrs-ui'` |
-| `from '@mui/icons-material'` | `from '@atipicus/mrs-ui'` |
+| `from '@mui/material/Button'` | `from '@mgomez-ext/mrs-ui'` |
+| `from '@mui/material/TextField'` | `from '@mgomez-ext/mrs-ui'` |
+| `from '@mui/material'` | `from '@mgomez-ext/mrs-ui'` |
+| `from '@mui/icons-material'` | `from '@mgomez-ext/mrs-ui'` |
 
 #### Automated Migration Script
 
 ```bash
 # Use this regex to find all MUI imports
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/@mui\/material/@atipicus\/mrs-ui/g"
-find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/@mui\/icons-material/@atipicus\/mrs-ui/g"
+find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/@mui\/material/@mgomez-ext\/mrs-ui/g"
+find src -name "*.tsx" -o -name "*.ts" | xargs sed -i '' "s/@mui\/icons-material/@mgomez-ext\/mrs-ui/g"
 ```
 
 ### Step 3: Update Theme Usage
@@ -129,10 +129,10 @@ const customTheme = createTheme({
 });
 
 // ✅ After - Use MRS theme (already configured)
-import { theme } from '@atipicus/mrs-ui';
+import { theme } from '@mgomez-ext/mrs-ui';
 
 // Or customize further if needed:
-import { theme as mrsTheme } from '@atipicus/mrs-ui';
+import { theme as mrsTheme } from '@mgomez-ext/mrs-ui';
 import { createTheme } from '@mui/material/styles';
 
 const customTheme = createTheme({
@@ -169,7 +169,7 @@ Most components work exactly the same:
 import { useTheme } from '@mui/material/styles';
 
 // ✅ After
-import { useTheme } from '@atipicus/mrs-ui';
+import { useTheme } from '@mgomez-ext/mrs-ui';
 ```
 
 #### Custom Shape Values
@@ -180,7 +180,7 @@ const theme = useTheme();
 <Box sx={{ borderRadius: theme.shape.borderRadius }} />
 
 // ✅ After (MRS has extended shape)
-import { getThemeShape } from '@atipicus/mrs-ui/types/theme-helpers';
+import { getThemeShape } from '@mgomez-ext/mrs-ui/types/theme-helpers';
 const shape = getThemeShape(useTheme());
 <Box sx={{ borderRadius: shape.rounded }} /> // pill shape
 ```
@@ -207,7 +207,7 @@ const shape = getThemeShape(useTheme());
 ```typescript
 // Works the same in both
 import { styled } from '@mui/material/styles';
-import { Button } from '@atipicus/mrs-ui';
+import { Button } from '@mgomez-ext/mrs-ui';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   borderRadius: theme.shape.rounded,
@@ -231,8 +231,8 @@ import DatePicker from '@mui/x-date-pickers/DatePicker';
 ### After (MRS UI)
 
 ```typescript
-import { Button } from '@atipicus/mrs-ui';
-import { LazyTable, LazyDatePicker } from '@atipicus/mrs-ui/lazy';
+import { Button } from '@mgomez-ext/mrs-ui';
+import { LazyTable, LazyDatePicker } from '@mgomez-ext/mrs-ui/lazy';
 import { Suspense } from 'react';
 
 // Only Button loaded initially: ~123 KB
@@ -270,7 +270,7 @@ npm install
 import DeleteIcon from '@mui/icons-material/Delete';
 
 // ✅ After
-import { Icon } from '@atipicus/mrs-ui';
+import { Icon } from '@mgomez-ext/mrs-ui';
 <Icon iconName="delete" />
 ```
 
@@ -281,7 +281,7 @@ import { Icon } from '@atipicus/mrs-ui';
 **Solution**:
 ```typescript
 // Make sure ThemeProvider is at app root
-import { ThemeProvider, theme } from '@atipicus/mrs-ui';
+import { ThemeProvider, theme } from '@mgomez-ext/mrs-ui';
 
 <ThemeProvider theme={theme}>
   <App />
@@ -292,7 +292,7 @@ import { ThemeProvider, theme } from '@atipicus/mrs-ui';
 
 ## ✅ Migration Checklist
 
-- [ ] Install `@atipicus/mrs-ui`
+- [ ] Install `@mgomez-ext/mrs-ui`
 - [ ] Remove `@mui/material`, `@mui/icons-material`
 - [ ] Update all imports (use find & replace)
 - [ ] Replace ThemeProvider

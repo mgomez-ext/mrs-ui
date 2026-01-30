@@ -14,7 +14,7 @@
 - **Test Coverage**: 1,182 tests passing (100% pass rate)
 - **Build Size**: 390.80 kB gzipped
 - **Quality**: ✅ Lint, TypeScript, Tests, Build - All Green
-- **Documentation**: Storybook deployed at [atipicus.github.io/mrs-ui](https://atipicus.github.io/mrs-ui/)
+- **Documentation**: Storybook deployed at [mgomez-ext.github.io/mrs-ui](https://mgomez-ext.github.io/mrs-ui/)
 
 ---
 
@@ -49,7 +49,7 @@ Alert, AppBar, Autocomplete, BottomNavigation, ButtonGroup, DatePicker, DateTime
 - ✅ Material Symbols integration (variable font system)
 - ✅ 1,182 tests passing (56 test suites)
 - ✅ All quality checks green
-- ✅ Published to npm: `@atipicus/mrs-ui@0.8.0`
+- ✅ Published to npm: `@mgomez-ext/mrs-ui@0.8.0`
 
 ### v0.6.0 (December 29, 2024)
 **Phase 6 - Advanced Components**
@@ -138,14 +138,14 @@ Alert, AppBar, Autocomplete, BottomNavigation, ButtonGroup, DatePicker, DateTime
 
 ### Installation
 ```bash
-npm install @atipicus/mrs-ui
+npm install @mgomez-ext/mrs-ui
 ```
 
 ### Usage
 ```tsx
-import { Button, TextField, Stack } from '@atipicus/mrs-ui';
+import { Button, TextField, Stack } from '@mgomez-ext/mrs-ui';
 import { ThemeProvider } from '@mui/material';
-import { theme } from '@atipicus/mrs-ui/theme';
+import { theme } from '@mgomez-ext/mrs-ui/theme';
 
 function App() {
   return (
@@ -163,9 +163,9 @@ function App() {
 
 ## Resources
 
-- **📦 npm Package**: [@atipicus/mrs-ui](https://www.npmjs.com/package/@atipicus/mrs-ui)
-- **📘 Storybook**: [atipicus.github.io/mrs-ui](https://atipicus.github.io/mrs-ui/)
-- **📋 Repository**: [github.com/Atipicus/mrs-ui](https://github.com/Atipicus/mrs-ui)
+- **📦 GitHub Packages**: [@mgomez-ext/mrs-ui](https://github.com/mgomez-ext/mrs-ui/packages)
+- **📘 Storybook**: [mgomez-ext.github.io/mrs-ui](https://mgomez-ext.github.io/mrs-ui/)
+- **📋 Repository**: [github.com/mgomez-ext/mrs-ui](https://github.com/mgomez-ext/mrs-ui)
 - **🎨 Figma**: [MRS Material-UI v6.5.0 Design](https://figma.com/design/ESNP5KunFotGObfcuXZ9Op/MRS---Material-UI-v.6.5.0)
 - **📝 Changelog**: [CHANGELOG.md](CHANGELOG.md)
 

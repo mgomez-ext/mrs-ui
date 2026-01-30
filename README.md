@@ -1,6 +1,6 @@
 # MRS UI Design System
 
-[![npm version](https://badge.fury.io/js/@atipicus%2Fmrs-ui.svg)](https://www.npmjs.com/package/@atipicus/mrs-ui)
+[![GitHub Packages](https://img.shields.io/badge/package-GitHub%20Packages-blue)](https://github.com/mgomez-ext/mrs-ui/packages)
 
 A comprehensive design system based on Material UI, with 53 production-ready React components and TypeScript support.
 
@@ -19,7 +19,7 @@ A comprehensive design system based on Material UI, with 53 production-ready Rea
 ## 📦 Installation
 
 ```bash
-npm install @atipicus/mrs-ui
+npm install @mgomez-ext/mrs-ui
 ```
 
 **Peer Dependencies:**
@@ -30,7 +30,7 @@ npm install @mui/material @emotion/react @emotion/styled react react-dom
 ## 🎯 Quick Start
 
 ```tsx
-import { Button, TextField, ThemeProvider, theme } from '@atipicus/mrs-ui';
+import { Button, TextField, ThemeProvider, theme } from '@mgomez-ext/mrs-ui';
 
 function App() {
   return (
@@ -44,8 +44,8 @@ function App() {
 
 ## 🔗 Links
 
-- [npm Package](https://www.npmjs.com/package/@atipicus/mrs-ui)
-- [GitHub Repository](https://github.com/Atipicus/mrs-ui)
+- [GitHub Packages](https://github.com/mgomez-ext/mrs-ui/packages)
+- [GitHub Repository](https://github.com/mgomez-ext/mrs-ui)
 
 ---
 

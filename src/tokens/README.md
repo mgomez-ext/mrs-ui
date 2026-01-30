@@ -78,7 +78,7 @@ El Token Hub genera **4 formatos diferentes** para diferentes casos de uso:
 
 ```css
 /* Import en tu CSS global */
-@import '@atipicus/mrs-ui/tokens/generated/css/tokens.css';
+@import '@mgomez-ext/mrs-ui/tokens/generated/css/tokens.css';
 
 /* Usar las variables */
 .my-button {
@@ -112,7 +112,7 @@ El Token Hub genera **4 formatos diferentes** para diferentes casos de uso:
 
 ```scss
 // Import en tu .scss
-@import '@atipicus/mrs-ui/tokens/generated/scss/tokens';
+@import '@mgomez-ext/mrs-ui/tokens/generated/scss/tokens';
 
 // Usar las variables
 .my-button {
@@ -122,7 +122,7 @@ El Token Hub genera **4 formatos diferentes** para diferentes casos de uso:
 }
 
 // O usando el mapa
-@import '@atipicus/mrs-ui/tokens/generated/scss/tokens-map';
+@import '@mgomez-ext/mrs-ui/tokens/generated/scss/tokens-map';
 
 @function get-token($path) {
   @return map-get($mrs-tokens, $path);
@@ -160,7 +160,7 @@ import {
   SemanticColorPrimaryMain,
   ComponentButtonBorderRadius,
   PrimitivesSpacing2
-} from '@atipicus/mrs-ui/tokens';
+} from '@mgomez-ext/mrs-ui/tokens';
 
 // Usar en componentes React
 const MyButton = () => (
@@ -177,7 +177,7 @@ const MyButton = () => (
 
 // Usar en MUI theme (como lo hace theme.ts)
 import { createTheme } from '@mui/material/styles';
-import { SemanticColorPrimaryMain } from '@atipicus/mrs-ui/tokens';
+import { SemanticColorPrimaryMain } from '@mgomez-ext/mrs-ui/tokens';
 
 const theme = createTheme({
   palette: {
@@ -226,7 +226,7 @@ const theme = createTheme({
 }
 
 // Usar en scripts
-const tokens = require('@atipicus/mrs-ui/tokens/generated/json/tokens-flat.json');
+const tokens = require('@mgomez-ext/mrs-ui/tokens/generated/json/tokens-flat.json');
 console.log(tokens['semantic-color-primary-main']); // "#00686f"
 ```
 
@@ -245,7 +245,7 @@ console.log(tokens['semantic-color-primary-main']); // "#00686f"
 }
 
 // Usar en componentes de documentación
-const tokens = require('@atipicus/mrs-ui/tokens/generated/json/tokens-nested.json');
+const tokens = require('@mgomez-ext/mrs-ui/tokens/generated/json/tokens-nested.json');
 const primaryColor = tokens.semantic.color.primary.main;
 ```
 
@@ -356,7 +356,7 @@ npm run tokens:build
 ### 3. Usar en código
 
 ```typescript
-import { PrimitivesColorsBrandNewColor } from '@atipicus/mrs-ui/tokens';
+import { PrimitivesColorsBrandNewColor } from '@mgomez-ext/mrs-ui/tokens';
 ```
 
 ---

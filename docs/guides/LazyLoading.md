@@ -71,15 +71,15 @@ With code splitting enabled (v0.12.0+), components are automatically split into 
 MRS UI v0.12.0+ includes lazy exports out of the box:
 
 ```bash
-npm install @atipicus/mrs-ui@latest
+npm install @mgomez-ext/mrs-ui@latest
 ```
 
 ### Basic Usage
 
 ```tsx
 import { Suspense } from 'react';
-import { LazyTable, LazyTableContainer } from '@atipicus/mrs-ui/lazy';
-import { CircularProgress } from '@atipicus/mrs-ui';
+import { LazyTable, LazyTableContainer } from '@mgomez-ext/mrs-ui/lazy';
+import { CircularProgress } from '@mgomez-ext/mrs-ui';
 
 function MyDataTable() {
   return (
@@ -107,7 +107,7 @@ import {
   LazyDatePicker,
   LazyTimePicker,
   LazyDateTimePicker,
-} from '@atipicus/mrs-ui/lazy';
+} from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense fallback={<CircularProgress />}>
   <LazyDatePicker label="Select Date" />
@@ -129,7 +129,7 @@ import {
   LazyTableFooter,
   LazyTableRow,
   LazyTableCell,
-} from '@atipicus/mrs-ui/lazy';
+} from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense fallback={<CircularProgress />}>
   <LazyTableContainer>
@@ -165,7 +165,7 @@ import {
   LazyDialogContent,
   LazyDialogContentText,
   LazyDialogActions,
-} from '@atipicus/mrs-ui/lazy';
+} from '@mgomez-ext/mrs-ui/lazy';
 
 // Drawer example
 <Suspense fallback={null}>
@@ -199,8 +199,8 @@ import {
 
 ```tsx
 import { Suspense } from 'react';
-import { CircularProgress, Box } from '@atipicus/mrs-ui';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
+import { CircularProgress, Box } from '@mgomez-ext/mrs-ui';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense
   fallback={
@@ -219,8 +219,8 @@ import { LazyTable } from '@atipicus/mrs-ui/lazy';
 
 ```tsx
 import { Suspense } from 'react';
-import { Skeleton, Box } from '@atipicus/mrs-ui';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
+import { Skeleton, Box } from '@mgomez-ext/mrs-ui';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense
   fallback={
@@ -241,8 +241,8 @@ For overlays that are conditionally rendered:
 
 ```tsx
 import { Suspense, useState } from 'react';
-import { Button } from '@atipicus/mrs-ui';
-import { LazyDialog } from '@atipicus/mrs-ui/lazy';
+import { Button } from '@mgomez-ext/mrs-ui';
+import { LazyDialog } from '@mgomez-ext/mrs-ui/lazy';
 
 function MyComponent() {
   const [open, setOpen] = useState(false);
@@ -274,8 +274,8 @@ function MyComponent() {
 ```tsx
 import { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CircularProgress } from '@atipicus/mrs-ui';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
+import { CircularProgress } from '@mgomez-ext/mrs-ui';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
 
 function App() {
   return (
@@ -301,8 +301,8 @@ function App() {
 
 ```tsx
 import { Suspense } from 'react';
-import { CircularProgress } from '@atipicus/mrs-ui';
-import { LazyDatePicker } from '@atipicus/mrs-ui/lazy';
+import { CircularProgress } from '@mgomez-ext/mrs-ui';
+import { LazyDatePicker } from '@mgomez-ext/mrs-ui/lazy';
 
 function FeatureComponent({ isPremiumUser }: { isPremiumUser: boolean }) {
   if (!isPremiumUser) {
@@ -323,8 +323,8 @@ function FeatureComponent({ isPremiumUser }: { isPremiumUser: boolean }) {
 
 ```tsx
 import { Suspense } from 'react';
-import { CircularProgress, Box } from '@atipicus/mrs-ui';
-import { LazyTable, LazyTimeline } from '@atipicus/mrs-ui/lazy';
+import { CircularProgress, Box } from '@mgomez-ext/mrs-ui';
+import { LazyTable, LazyTimeline } from '@mgomez-ext/mrs-ui/lazy';
 
 function Dashboard() {
   return (
@@ -348,13 +348,13 @@ function Dashboard() {
 ### Preloading Components
 
 ```tsx
-import { Button } from '@atipicus/mrs-ui';
+import { Button } from '@mgomez-ext/mrs-ui';
 
 // Preload dialog on button hover
 function MyComponent() {
   const handleMouseEnter = () => {
     // Preload the lazy component
-    import('@atipicus/mrs-ui/lazy').then((mod) => {
+    import('@mgomez-ext/mrs-ui/lazy').then((mod) => {
       // Dialog is now in cache
     });
   };
@@ -493,7 +493,7 @@ function MyComponent() {
 ```tsx
 import { render, screen } from '@testing-library/react';
 import { Suspense } from 'react';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
 
 test('shows loading state', () => {
   render(
@@ -540,7 +540,7 @@ test('shows loading state', () => {
 
 ```tsx
 import { useState, useTransition, Suspense } from 'react';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
 
 function MyComponent() {
   const [showTable, setShowTable] = useState(false);
@@ -575,8 +575,8 @@ function MyComponent() {
 
 ```tsx
 import { Suspense } from 'react';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
-import type { TableProps } from '@atipicus/mrs-ui';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
+import type { TableProps } from '@mgomez-ext/mrs-ui';
 
 function MyTable(props: TableProps) {
   return (

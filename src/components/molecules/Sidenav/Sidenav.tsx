@@ -8,7 +8,7 @@
  *
  * @example
  * ```tsx
- * import { Sidenav } from '@atipicus/mrs-ui';
+ * import { Sidenav } from '@mgomez-ext/mrs-ui';
  *
  * function App() {
  *   return (

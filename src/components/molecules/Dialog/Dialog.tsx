@@ -6,7 +6,7 @@
  *
  * @example
  * ```tsx
- * import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@atipicus/mrs-ui';
+ * import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mgomez-ext/mrs-ui';
  *
  * function MyDialog() {
  *   const [open, setOpen] = useState(false);

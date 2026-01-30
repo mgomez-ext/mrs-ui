@@ -157,7 +157,7 @@ El MRS Design System utiliza un flujo bidireccional de sincronización de tokens
 2. Seleccionar "GitHub"
 3. Configurar:
    ```
-   Repository: Atipicus/mrs-ui
+   Repository: mgomez-ext/mrs-ui
    Branch: main
    File Path: src/tokens/generated/json/figma-tokens.json
    Personal Access Token: [tu token]

@@ -58,8 +58,8 @@ Technical API and reference documentation.
 ## 🔗 Quick Links
 
 - [Storybook Components](https://storybook.example.com) - Interactive component explorer
-- [npm Package](https://www.npmjs.com/package/@atipicus/mrs-ui) - Install from npm
-- [GitHub Repository](https://github.com/Atipicus/mrs-ui) - Source code
+- [GitHub Packages](https://github.com/mgomez-ext/mrs-ui/packages) - Install from GitHub Packages
+- [GitHub Repository](https://github.com/mgomez-ext/mrs-ui) - Source code
 
 ---
 

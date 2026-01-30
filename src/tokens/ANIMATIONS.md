@@ -46,7 +46,7 @@ Duration tokens define how long animations and transitions last.
 ### Usage Examples
 
 ```typescript
-import { PrimitivesMotionDurationFast } from '@atipicus/mrs-ui/tokens';
+import { PrimitivesMotionDurationFast } from '@mgomez-ext/mrs-ui/tokens';
 
 // TypeScript
 const buttonTransition = `all ${PrimitivesMotionDurationFast} ease-in-out`;

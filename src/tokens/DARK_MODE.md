@@ -143,7 +143,7 @@ import {
   SemanticColorDarkPrimaryMain,
   SemanticColorDarkBackgroundDefault,
   ComponentAlertDarkErrorFilledBackground,
-} from '@atipicus/mrs-ui/tokens';
+} from '@mgomez-ext/mrs-ui/tokens';
 
 const MyDarkComponent = () => (
   <div style={{
@@ -173,7 +173,7 @@ src/stories/ThemeSwitcher.stories.tsx
 import { useState } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { lightTheme, darkTheme } from '@atipicus/mrs-ui/theme';
+import { lightTheme, darkTheme } from '@mgomez-ext/mrs-ui/theme';
 
 function App() {
   const [isDark, setIsDark] = useState(false);

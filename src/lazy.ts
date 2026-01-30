@@ -10,8 +10,8 @@
  * @example
  * ```tsx
  * import { Suspense } from 'react';
- * import { LazyTable } from '@atipicus/mrs-ui/lazy';
- * import { CircularProgress } from '@atipicus/mrs-ui';
+ * import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
+ * import { CircularProgress } from '@mgomez-ext/mrs-ui';
  *
  * function MyApp() {
  *   return (
@@ -24,7 +24,7 @@
  * }
  * ```
  *
- * @package @atipicus/mrs-ui
+ * @package @mgomez-ext/mrs-ui
  * @version 0.12.0
  */
 
@@ -42,7 +42,7 @@ import { lazy } from 'react';
  * @example
  * ```tsx
  * import { Suspense } from 'react';
- * import { LazyDatePicker } from '@atipicus/mrs-ui/lazy';
+ * import { LazyDatePicker } from '@mgomez-ext/mrs-ui/lazy';
  *
  * <Suspense fallback={<CircularProgress />}>
  *   <LazyDatePicker label="Select Date" />
@@ -61,7 +61,7 @@ export const LazyDatePicker = lazy(() =>
  * @example
  * ```tsx
  * import { Suspense } from 'react';
- * import { LazyTimePicker } from '@atipicus/mrs-ui/lazy';
+ * import { LazyTimePicker } from '@mgomez-ext/mrs-ui/lazy';
  *
  * <Suspense fallback={<CircularProgress />}>
  *   <LazyTimePicker label="Select Time" />
@@ -80,7 +80,7 @@ export const LazyTimePicker = lazy(() =>
  * @example
  * ```tsx
  * import { Suspense } from 'react';
- * import { LazyDateTimePicker } from '@atipicus/mrs-ui/lazy';
+ * import { LazyDateTimePicker } from '@mgomez-ext/mrs-ui/lazy';
  *
  * <Suspense fallback={<CircularProgress />}>
  *   <LazyDateTimePicker label="Select Date & Time" />
@@ -112,7 +112,7 @@ export const LazyDateTimePicker = lazy(() =>
  *   LazyTableBody,
  *   LazyTableRow,
  *   LazyTableCell
- * } from '@atipicus/mrs-ui/lazy';
+ * } from '@mgomez-ext/mrs-ui/lazy';
  *
  * <Suspense fallback={<CircularProgress />}>
  *   <LazyTableContainer>
@@ -167,8 +167,8 @@ export const LazyTableCell = lazy(() =>
  * @example
  * ```tsx
  * import { Suspense, useState } from 'react';
- * import { LazyDrawer } from '@atipicus/mrs-ui/lazy';
- * import { Button } from '@atipicus/mrs-ui';
+ * import { LazyDrawer } from '@mgomez-ext/mrs-ui/lazy';
+ * import { Button } from '@mgomez-ext/mrs-ui';
  *
  * function MyApp() {
  *   const [open, setOpen] = useState(false);
@@ -208,8 +208,8 @@ export const LazyDrawer = lazy(() =>
  *   LazyDialogTitle,
  *   LazyDialogContent,
  *   LazyDialogActions
- * } from '@atipicus/mrs-ui/lazy';
- * import { Button } from '@atipicus/mrs-ui';
+ * } from '@mgomez-ext/mrs-ui/lazy';
+ * import { Button } from '@mgomez-ext/mrs-ui';
  *
  * function MyApp() {
  *   const [open, setOpen] = useState(false);
@@ -263,7 +263,7 @@ export const LazyDialogActions = lazy(() =>
  *
  * @example
  * ```tsx
- * import type { LazyComponent } from '@atipicus/mrs-ui/lazy';
+ * import type { LazyComponent } from '@mgomez-ext/mrs-ui/lazy';
  *
  * const MyLazyComponent: LazyComponent<typeof MyComponent> = lazy(() =>
  *   import('./MyComponent').then(mod => ({ default: mod.MyComponent }))
@@ -277,7 +277,7 @@ export type LazyComponent<T extends React.ComponentType<any>> = React.LazyExotic
  *
  * @example
  * ```tsx
- * import { LazySuspense, LazyTable } from '@atipicus/mrs-ui/lazy';
+ * import { LazySuspense, LazyTable } from '@mgomez-ext/mrs-ui/lazy';
  *
  * <LazySuspense>
  *   <LazyTable>

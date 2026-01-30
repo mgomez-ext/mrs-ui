@@ -1,6 +1,6 @@
 /**
  * MRS Design System - Main Entry Point
- * @package @atipicus/mrs-ui
+ * @package @mgomez-ext/mrs-ui
  * @version 0.12.0
  */
 

@@ -1,5 +1,5 @@
 {
-  "name": "@atipicus/mrs-ui",
+  "name": "@mgomez-ext/mrs-ui",
   "version": "1.1.0",
   "description": "A cromprehensive design system Based on Material UI, with 53 production ready React components and TypeScript support...",
   "main": "./dist/index.js",
@@ -7,7 +7,8 @@
   "types": "./dist/index.d.ts",
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "exports": {
     ".": {
@@ -83,12 +84,12 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Atipicus/mrs-ui.git"
+    "url": "git+https://github.com/mgomez-ext/mrs-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/Atipicus/mrs-ui/issues"
+    "url": "https://github.com/mgomez-ext/mrs-ui/issues"
   },
-  "homepage": "https://github.com/Atipicus/mrs-ui#readme",
+  "homepage": "https://github.com/mgomez-ext/mrs-ui#readme",
   "peerDependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",

@@ -21,7 +21,7 @@
 ### **Paso 2: Importar Proyecto**
 
 1. En el dashboard de Vercel, click **"Add New..."** → **"Project"**
-2. Busca y selecciona: **`Atipicus/mrs-ui`**
+2. Busca y selecciona: **`mgomez-ext/mrs-ui`**
 3. Click **"Import"**
 
 ---
@@ -87,7 +87,7 @@ Una vez completado, verás:
 Production:  https://mrs-ui.vercel.app
             (o similar con hash único)
 
-Preview:     https://mrs-ui-git-main-atipicus.vercel.app
+Preview:     https://mrs-ui-git-main-mgomez-ext.vercel.app
 ```
 
 ### **URLs que Obtendrás:**
@@ -96,7 +96,7 @@ Preview:     https://mrs-ui-git-main-atipicus.vercel.app
 |------|-----|-------------|
 | **Production** | `https://mrs-ui.vercel.app` | URL pública del Storybook |
 | **Preview** | `https://mrs-ui-git-[branch].vercel.app` | Preview por branch |
-| **Dashboard** | `https://vercel.com/atipicus/mrs-ui` | Panel de control |
+| **Dashboard** | `https://vercel.com/mgomez-ext/mrs-ui` | Panel de control |
 
 ---
 

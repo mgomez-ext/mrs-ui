@@ -76,7 +76,7 @@ Implemented **comprehensive improvements** in **2 phases**:
 ### Before
 
 ```typescript
-import { Table } from '@atipicus/mrs-ui';
+import { Table } from '@mgomez-ext/mrs-ui';
 // Loads 403 KB
 ```
 
@@ -84,8 +84,8 @@ import { Table } from '@atipicus/mrs-ui';
 
 ```typescript
 import { Suspense } from 'react';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
-import { CircularProgress } from '@atipicus/mrs-ui';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
+import { CircularProgress } from '@mgomez-ext/mrs-ui';
 
 <Suspense fallback={<CircularProgress />}>
   <LazyTable /> {/* Loads only 123 KB initially! */}

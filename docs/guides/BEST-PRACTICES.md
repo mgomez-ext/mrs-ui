@@ -28,11 +28,11 @@
 
 ```typescript
 // ✅ Named imports (tree-shakeable)
-import { Button, TextField, Typography } from '@atipicus/mrs-ui';
+import { Button, TextField, Typography } from '@mgomez-ext/mrs-ui';
 
 // ✅ Lazy loading for heavy components
 import { Suspense } from 'react';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense fallback={<CircularProgress />}>
   <LazyTable />
@@ -81,13 +81,13 @@ function CustomButton({ loading, ...props }: CustomButtonProps) {
 
 ```typescript
 // ❌ Default imports (not supported)
-import Button from '@atipicus/mrs-ui';
+import Button from '@mgomez-ext/mrs-ui';
 
 // ❌ Deep imports (breaks code splitting)
-import Button from '@atipicus/mrs-ui/dist/components/atoms/Button';
+import Button from '@mgomez-ext/mrs-ui/dist/components/atoms/Button';
 
 // ❌ Wildcard imports (larger bundle)
-import * as MRS from '@atipicus/mrs-ui';
+import * as MRS from '@mgomez-ext/mrs-ui';
 ```
 
 #### Prop Misuse
@@ -114,7 +114,7 @@ import * as MRS from '@atipicus/mrs-ui';
 #### Use Theme Tokens
 
 ```typescript
-import { useTheme } from '@atipicus/mrs-ui';
+import { useTheme } from '@mgomez-ext/mrs-ui';
 
 function MyComponent() {
   const theme = useTheme();
@@ -155,7 +155,7 @@ function MyComponent() {
 
 ```typescript
 import { styled } from '@mui/material/styles';
-import { Button } from '@atipicus/mrs-ui';
+import { Button } from '@mgomez-ext/mrs-ui';
 
 // ✅ Styled component for reusable custom styles
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -212,7 +212,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 ```typescript
 // ✅ Lazy load heavy components
 import { Suspense } from 'react';
-import { LazyTable, LazyDatePicker } from '@atipicus/mrs-ui/lazy';
+import { LazyTable, LazyDatePicker } from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense fallback={<Skeleton height={400} />}>
   <LazyTable />
@@ -265,10 +265,10 @@ import {
   DatePicker,
   Timeline,
   // ... 50 more components
-} from '@atipicus/mrs-ui';
+} from '@mgomez-ext/mrs-ui';
 
 // ✅ Import only what you need
-import { Button, TextField } from '@atipicus/mrs-ui';
+import { Button, TextField } from '@mgomez-ext/mrs-ui';
 ```
 
 #### Create New Objects in Render
@@ -372,7 +372,7 @@ const buttonSx = { color: 'primary.main', padding: 2 };
 #### Use Proper Types
 
 ```typescript
-import type { ButtonProps, TextFieldProps } from '@atipicus/mrs-ui';
+import type { ButtonProps, TextFieldProps } from '@mgomez-ext/mrs-ui';
 
 // ✅ Extend component props
 interface CustomButtonProps extends ButtonProps {
@@ -392,7 +392,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ loading, icon, children, ..
 #### Use Theme Helpers
 
 ```typescript
-import { getThemeShape } from '@atipicus/mrs-ui/types/theme-helpers';
+import { getThemeShape } from '@mgomez-ext/mrs-ui/types/theme-helpers';
 import { useTheme } from '@mui/material/styles';
 
 // ✅ Type-safe theme access
@@ -420,7 +420,7 @@ const shape = theme.shape as any;
 <Button variant="invalid-variant">Click</Button>
 
 // ✅ Use proper types
-import { getThemeShape } from '@atipicus/mrs-ui/types/theme-helpers';
+import { getThemeShape } from '@mgomez-ext/mrs-ui/types/theme-helpers';
 const shape = getThemeShape(theme);
 ```
 
@@ -434,7 +434,7 @@ const shape = getThemeShape(theme);
 
 ```typescript
 import { render, screen, userEvent } from '@testing-library/react';
-import { Button } from '@atipicus/mrs-ui';
+import { Button } from '@mgomez-ext/mrs-ui';
 
 // ✅ Test user interactions
 test('button calls onClick when clicked', async () => {
@@ -482,17 +482,17 @@ expect(screen.getByRole('dialog')).toBeVisible();
 
 ```typescript
 // ✅ Lazy load heavy components
-import { LazyTable, LazyDatePicker } from '@atipicus/mrs-ui/lazy';
+import { LazyTable, LazyDatePicker } from '@mgomez-ext/mrs-ui/lazy';
 ```
 
 #### Tree Shaking
 
 ```typescript
 // ✅ Named imports (tree-shakeable)
-import { Button, TextField } from '@atipicus/mrs-ui';
+import { Button, TextField } from '@mgomez-ext/mrs-ui';
 
 // ❌ Imports everything
-import * as MRS from '@atipicus/mrs-ui';
+import * as MRS from '@mgomez-ext/mrs-ui';
 ```
 
 ---
@@ -502,7 +502,7 @@ import * as MRS from '@atipicus/mrs-ui';
 ### Form Handling
 
 ```typescript
-import { TextField, Button, Box } from '@atipicus/mrs-ui';
+import { TextField, Button, Box } from '@mgomez-ext/mrs-ui';
 import { useState } from 'react';
 
 function LoginForm() {
@@ -544,13 +544,13 @@ function LoginForm() {
 
 ```typescript
 import { useState, Suspense } from 'react';
-import { Button } from '@atipicus/mrs-ui';
+import { Button } from '@mgomez-ext/mrs-ui';
 import {
   LazyDialog,
   LazyDialogTitle,
   LazyDialogContent,
   LazyDialogActions,
-} from '@atipicus/mrs-ui/lazy';
+} from '@mgomez-ext/mrs-ui/lazy';
 
 function ConfirmDialog() {
   const [open, setOpen] = useState(false);
@@ -607,7 +607,7 @@ const theme = createTheme({
 });
 
 // ✅ Good - MRS theme already has proper overrides
-import { theme } from '@atipicus/mrs-ui';
+import { theme } from '@mgomez-ext/mrs-ui';
 ```
 
 ### ❌ Don't Mix Styling Approaches

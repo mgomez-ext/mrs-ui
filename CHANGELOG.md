@@ -88,7 +88,7 @@ This release completes the migration to a unified design token system, eliminati
 
 **For Package Consumers:**
 ```bash
-npm install @atipicus/mrs-ui@0.12.0
+npm install @mgomez-ext/mrs-ui@0.12.0
 # No code changes required! ✅
 ```
 
@@ -314,30 +314,30 @@ None - All changes are additive and backward compatible.
 
 ```bash
 # Update package
-npm update @atipicus/mrs-ui
+npm update @mgomez-ext/mrs-ui
 
 # Import tokens (optional, for advanced usage)
 import { 
   PrimitivesMotionDurationFast,
   SemanticColorDarkPrimaryMain 
-} from '@atipicus/mrs-ui/tokens';
+} from '@mgomez-ext/mrs-ui/tokens';
 
 # Import animation hooks (optional)
 import { 
   useRipple, 
   useShake, 
   useBounce 
-} from '@atipicus/mrs-ui/hooks/animations';
+} from '@mgomez-ext/mrs-ui/hooks/animations';
 
 # Import effect components (optional)
 import { 
   RippleButton, 
   AnimatedBadge, 
   LoadingDots 
-} from '@atipicus/mrs-ui/components/effects';
+} from '@mgomez-ext/mrs-ui/components/effects';
 
 # Use dark theme
-import { darkTheme } from '@atipicus/mrs-ui/theme';
+import { darkTheme } from '@mgomez-ext/mrs-ui/theme';
 <ThemeProvider theme={darkTheme}>...</ThemeProvider>
 ```
 

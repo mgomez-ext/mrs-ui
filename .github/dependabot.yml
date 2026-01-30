@@ -48,10 +48,10 @@ updates:
 
     # Reviewers and assignees
     reviewers:
-      - "Atipicus/mrs-ui-maintainers"
+      - "mgomez-ext/mrs-ui-maintainers"
 
     assignees:
-      - "Atipicus/mrs-ui-maintainers"
+      - "mgomez-ext/mrs-ui-maintainers"
 
     # Commit and PR settings
     commit-message:

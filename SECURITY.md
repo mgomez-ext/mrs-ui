@@ -11,7 +11,7 @@ Please email your security report to: **martin.gomez.ext@redsalud.cl**
 Include the following information in your report:
 
 - **Description:** A clear explanation of the vulnerability
-- **Affected Version(s):** Which version(s) of `@atipicus/mrs-ui` are affected (if known)
+- **Affected Version(s):** Which version(s) of `@mgomez-ext/mrs-ui` are affected (if known)
 - **Steps to Reproduce:** Instructions to reproduce the issue
 - **Proof of Concept:** Code samples or screenshots demonstrating the vulnerability
 - **Impact:** An explanation of the potential impact and severity
@@ -46,7 +46,7 @@ Please upgrade to a supported version to receive security updates.
 
 ### For Users of MRS-UI
 
-1. **Keep Dependencies Updated:** Regularly update `@atipicus/mrs-ui` and its dependencies
+1. **Keep Dependencies Updated:** Regularly update `@mgomez-ext/mrs-ui` and its dependencies
 2. **Monitor Advisories:** Subscribe to GitHub security advisories for this repository
 3. **Peer Dependencies:** Ensure Material-UI, React, and Emotion are kept up-to-date
 4. **CSP Headers:** Implement strong Content Security Policy headers in your application

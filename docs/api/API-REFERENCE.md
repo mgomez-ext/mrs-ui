@@ -18,7 +18,7 @@ import {
   ThemeProvider,
   // Hooks
   useTheme,
-} from '@atipicus/mrs-ui';
+} from '@mgomez-ext/mrs-ui';
 ```
 
 ### Lazy Loading
@@ -29,14 +29,14 @@ import {
   LazyDatePicker,
   LazyDrawer,
   LazyDialog,
-} from '@atipicus/mrs-ui/lazy';
+} from '@mgomez-ext/mrs-ui/lazy';
 ```
 
 ### Theme Utilities
 
 ```typescript
-import { colors, typography, shape, spacing } from '@atipicus/mrs-ui/theme';
-import { getThemeShape } from '@atipicus/mrs-ui/types/theme-helpers';
+import { colors, typography, shape, spacing } from '@mgomez-ext/mrs-ui/theme';
+import { getThemeShape } from '@mgomez-ext/mrs-ui/types/theme-helpers';
 ```
 
 ---
@@ -87,7 +87,7 @@ interface MRSTheme {
 Hook to access theme in components:
 
 ```typescript
-import { useTheme } from '@atipicus/mrs-ui';
+import { useTheme } from '@mgomez-ext/mrs-ui';
 
 function MyComponent() {
   const theme = useTheme();
@@ -105,8 +105,8 @@ function MyComponent() {
 Type-safe access to extended shape tokens:
 
 ```typescript
-import { useTheme } from '@atipicus/mrs-ui';
-import { getThemeShape } from '@atipicus/mrs-ui/types/theme-helpers';
+import { useTheme } from '@mgomez-ext/mrs-ui';
+import { getThemeShape } from '@mgomez-ext/mrs-ui/types/theme-helpers';
 
 function MyComponent() {
   const theme = useTheme();
@@ -291,8 +291,8 @@ All lazy components accept the same props as their regular counterparts.
 
 ```typescript
 import { Suspense } from 'react';
-import { LazyTable } from '@atipicus/mrs-ui/lazy';
-import { CircularProgress } from '@atipicus/mrs-ui';
+import { LazyTable } from '@mgomez-ext/mrs-ui/lazy';
+import { CircularProgress } from '@mgomez-ext/mrs-ui';
 
 <Suspense fallback={<CircularProgress />}>
   <LazyTable size="medium" stickyHeader>
@@ -305,7 +305,7 @@ import { CircularProgress } from '@atipicus/mrs-ui';
 
 ```typescript
 import { Suspense } from 'react';
-import { LazyDatePicker } from '@atipicus/mrs-ui/lazy';
+import { LazyDatePicker } from '@mgomez-ext/mrs-ui/lazy';
 
 <Suspense fallback={<CircularProgress />}>
   <LazyDatePicker
@@ -323,7 +323,7 @@ import { LazyDatePicker } from '@atipicus/mrs-ui/lazy';
 ### Spacing Function
 
 ```typescript
-import { useTheme } from '@atipicus/mrs-ui';
+import { useTheme } from '@mgomez-ext/mrs-ui';
 
 const theme = useTheme();
 
@@ -341,7 +341,7 @@ theme.spacing(2, 3) // '8px 12px'
 ### Breakpoints
 
 ```typescript
-import { useTheme, useMediaQuery } from '@atipicus/mrs-ui';
+import { useTheme, useMediaQuery } from '@mgomez-ext/mrs-ui';
 
 const theme = useTheme();
 const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -404,13 +404,13 @@ import type {
   TypographyProps,
   TableProps,
   DialogProps,
-} from '@atipicus/mrs-ui';
+} from '@mgomez-ext/mrs-ui';
 
 // Theme types
-import type { MRSTheme } from '@atipicus/mrs-ui';
+import type { MRSTheme } from '@mgomez-ext/mrs-ui';
 
 // Token types
-import type { ColorScheme, TypographyScale } from '@atipicus/mrs-ui/theme';
+import type { ColorScheme, TypographyScale } from '@mgomez-ext/mrs-ui/theme';
 ```
 
 ---
@@ -420,7 +420,7 @@ import type { ColorScheme, TypographyScale } from '@atipicus/mrs-ui/theme';
 ### Custom Theme Extension
 
 ```typescript
-import { theme as mrsTheme } from '@atipicus/mrs-ui';
+import { theme as mrsTheme } from '@mgomez-ext/mrs-ui';
 import { createTheme } from '@mui/material/styles';
 
 const customTheme = createTheme({
@@ -443,7 +443,7 @@ const customTheme = createTheme({
 
 ```typescript
 import { useState } from 'react';
-import { ThemeProvider, lightTheme, darkTheme } from '@atipicus/mrs-ui';
+import { ThemeProvider, lightTheme, darkTheme } from '@mgomez-ext/mrs-ui';
 
 function App() {
   const [mode, setMode] = useState<'light' | 'dark'>('light');
@@ -475,4 +475,4 @@ function App() {
 **For detailed prop definitions**, refer to TypeScript type definitions in the source code or hover over components in your IDE with IntelliSense enabled.
 
 **Version**: 0.12.0  
-**Package**: `@atipicus/mrs-ui`
+**Package**: `@mgomez-ext/mrs-ui`
