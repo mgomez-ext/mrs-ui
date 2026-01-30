@@ -23,7 +23,7 @@
  * ```
  */
 
-import type { SxProps, Theme } from '@mui/material/styles';
+import type { CSSObject, Theme } from '@mui/material/styles';
 import { typographyTokens, shapeTokens } from './tokens-import';
 
 /**
@@ -38,28 +38,34 @@ export const styleCompositions = {
     /**
      * Base button styles
      */
-    base: (): SxProps<Theme> => ({
+    base: (): CSSObject => ({
       fontWeight: typographyTokens.fontWeightSemiBold,
       textTransform: 'none',
-      borderRadius: shapeTokens.md,
+      borderRadius: shapeTokens.rounded,
       transition: 'all 0.2s ease',
     }),
 
     /**
-     * Button size variants
+     * Button size variants (Figma measurements)
+     * Large: 102px width, 48px height
+     * Medium: 96px width, 40px height
+     * Small: 80px width, 32px height
      */
     sizes: {
       small: {
         fontSize: '0.8125rem',
-        padding: '4px 10px',
+        padding: '6px 12px',
+        minHeight: '32px',
       },
       medium: {
         fontSize: '0.875rem',
-        padding: '6px 16px',
+        padding: '8px 16px',
+        minHeight: '40px',
       },
       large: {
         fontSize: '1rem',
-        padding: '8px 22px',
+        padding: '12px 24px',
+        minHeight: '48px',
       },
     },
 
@@ -67,7 +73,7 @@ export const styleCompositions = {
      * Button state styles
      */
     states: {
-      disabled: (theme: Theme): SxProps<Theme> => ({
+      disabled: (): CSSObject => ({
         opacity: 0.5,
         cursor: 'not-allowed',
         pointerEvents: 'none',
@@ -83,7 +89,7 @@ export const styleCompositions = {
     /**
      * Base input styles
      */
-    base: (): SxProps<Theme> => ({
+    base: (): CSSObject => ({
       borderRadius: shapeTokens.md,
       transition: 'all 0.2s ease',
     }),
@@ -110,15 +116,15 @@ export const styleCompositions = {
      * Input state styles
      */
     states: {
-      disabled: (theme: Theme): SxProps<Theme> => ({
+      disabled: (theme: Theme): CSSObject => ({
         backgroundColor: theme.palette.action.disabledBackground,
         cursor: 'not-allowed',
       }),
-      error: (theme: Theme): SxProps<Theme> => ({
+      error: (theme: Theme): CSSObject => ({
         borderColor: theme.palette.error.main,
         color: theme.palette.error.main,
       }),
-      focused: (theme: Theme): SxProps<Theme> => ({
+      focused: (theme: Theme): CSSObject => ({
         borderColor: theme.palette.primary.main,
         outline: `2px solid ${theme.palette.primary.main}`,
       }),
@@ -133,7 +139,7 @@ export const styleCompositions = {
     /**
      * Base surface styles
      */
-    base: (theme: Theme): SxProps<Theme> => ({
+    base: (theme: Theme): CSSObject => ({
       borderRadius: shapeTokens.lg,
       backgroundColor: theme.palette.background.paper,
       color: theme.palette.text.primary,
@@ -144,9 +150,9 @@ export const styleCompositions = {
      */
     elevations: {
       none: { boxShadow: 'none' },
-      low: { boxShadow: (theme: Theme) => theme.shadows?.[1] },
-      medium: { boxShadow: (theme: Theme) => theme.shadows?.[4] },
-      high: { boxShadow: (theme: Theme) => theme.shadows?.[8] },
+      low: (theme: Theme): CSSObject => ({ boxShadow: theme.shadows?.[1] }),
+      medium: (theme: Theme): CSSObject => ({ boxShadow: theme.shadows?.[4] }),
+      high: (theme: Theme): CSSObject => ({ boxShadow: theme.shadows?.[8] }),
     },
   },
 
@@ -158,7 +164,7 @@ export const styleCompositions = {
     /**
      * Base list item styles
      */
-    base: (): SxProps<Theme> => ({
+    base: (): CSSObject => ({
       borderRadius: shapeTokens.sm,
       transition: 'all 0.2s ease',
     }),
@@ -167,14 +173,14 @@ export const styleCompositions = {
      * List item state styles
      */
     states: {
-      selected: (theme: Theme): SxProps<Theme> => ({
+      selected: (theme: Theme): CSSObject => ({
         backgroundColor: theme.palette.action.selected,
         fontWeight: typographyTokens.fontWeightSemiBold,
       }),
-      hover: (theme: Theme): SxProps<Theme> => ({
+      hover: (theme: Theme): CSSObject => ({
         backgroundColor: theme.palette.action.hover,
       }),
-      disabled: (theme: Theme): SxProps<Theme> => ({
+      disabled: (): CSSObject => ({
         opacity: 0.5,
         cursor: 'not-allowed',
         pointerEvents: 'none',
@@ -190,7 +196,7 @@ export const styleCompositions = {
     /**
      * Base chip styles
      */
-    base: (): SxProps<Theme> => ({
+    base: (): CSSObject => ({
       borderRadius: shapeTokens.rounded,
       fontWeight: typographyTokens.fontWeightMedium,
       transition: 'all 0.2s ease',
@@ -214,7 +220,7 @@ export const styleCompositions = {
      * Chip state styles
      */
     states: {
-      disabled: (theme: Theme): SxProps<Theme> => ({
+      disabled: (): CSSObject => ({
         opacity: 0.5,
         cursor: 'not-allowed',
       }),
@@ -229,7 +235,7 @@ export const styleCompositions = {
     /**
      * Base feedback styles
      */
-    base: (): SxProps<Theme> => ({
+    base: (): CSSObject => ({
       borderRadius: shapeTokens.md,
       padding: '12px 16px',
       transition: 'all 0.2s ease',
@@ -239,21 +245,9 @@ export const styleCompositions = {
      * Alert severity variants
      */
     variants: {
-      success: (theme: Theme): SxProps<Theme> => ({
-        backgroundColor: theme.palette.success.light,
-        color: theme.palette.success.dark,
-      }),
-      warning: (theme: Theme): SxProps<Theme> => ({
-        backgroundColor: theme.palette.warning.light,
-        color: theme.palette.warning.dark,
-      }),
-      error: (theme: Theme): SxProps<Theme> => ({
+      error: (theme: Theme): CSSObject => ({
         backgroundColor: theme.palette.error.light,
         color: theme.palette.error.dark,
-      }),
-      info: (theme: Theme): SxProps<Theme> => ({
-        backgroundColor: theme.palette.info.light,
-        color: theme.palette.info.dark,
       }),
     },
   },
@@ -266,7 +260,7 @@ export const styleCompositions = {
     /**
      * Focus state - applies consistent focus styling
      */
-    focus: (theme: Theme): SxProps<Theme> => ({
+    focus: (theme: Theme): CSSObject => ({
       outline: `2px solid ${theme.palette.primary.main}`,
       outlineOffset: '2px',
     }),
@@ -274,7 +268,7 @@ export const styleCompositions = {
     /**
      * Hover state - applies consistent hover styling
      */
-    hover: (theme: Theme): SxProps<Theme> => ({
+    hover: (theme: Theme): CSSObject => ({
       backgroundColor: theme.palette.action.hover,
       transition: 'background-color 0.2s ease',
     }),
@@ -282,7 +276,7 @@ export const styleCompositions = {
     /**
      * Active/selected state
      */
-    active: (theme: Theme): SxProps<Theme> => ({
+    active: (theme: Theme): CSSObject => ({
       backgroundColor: theme.palette.action.selected,
       fontWeight: typographyTokens.fontWeightSemiBold,
     }),
@@ -290,7 +284,7 @@ export const styleCompositions = {
     /**
      * Disabled state - applies consistent disabled styling
      */
-    disabled: (theme: Theme): SxProps<Theme> => ({
+    disabled: (): CSSObject => ({
       opacity: 0.5,
       cursor: 'not-allowed',
       pointerEvents: 'none',
@@ -299,7 +293,7 @@ export const styleCompositions = {
     /**
      * Loading state - subtle opacity reduction
      */
-    loading: (): SxProps<Theme> => ({
+    loading: (): CSSObject => ({
       position: 'relative',
       pointerEvents: 'none',
       opacity: 0.7,
@@ -346,7 +340,7 @@ export const styleCompositions = {
     /**
      * Flex row with centered items
      */
-    flexRowCenter: (): SxProps<Theme> => ({
+    flexRowCenter: (): CSSObject => ({
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
@@ -356,7 +350,7 @@ export const styleCompositions = {
     /**
      * Flex column with centered items
      */
-    flexColumnCenter: (): SxProps<Theme> => ({
+    flexColumnCenter: (): CSSObject => ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -366,14 +360,14 @@ export const styleCompositions = {
     /**
      * Full width container
      */
-    fullWidth: (): SxProps<Theme> => ({
+    fullWidth: (): CSSObject => ({
       width: '100%',
     }),
 
     /**
      * Responsive container
      */
-    responsiveContainer: (): SxProps<Theme> => ({
+    responsiveContainer: (): CSSObject => ({
       width: '100%',
       maxWidth: '100%',
     }),

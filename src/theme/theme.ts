@@ -242,55 +242,16 @@ const getComponentOverrides = (mode: 'light' | 'dark'): ThemeOptions['components
           backgroundColor: modeTokens.components.alert.error.filled.background,
           color: modeTokens.components.alert.error.filled.foreground,
         },
-        filledWarning: {
-          backgroundColor: modeTokens.components.alert.warning.filled.background,
-          color: modeTokens.components.alert.warning.filled.foreground,
-        },
-        filledInfo: {
-          backgroundColor: modeTokens.components.alert.info.filled.background,
-          color: modeTokens.components.alert.info.filled.foreground,
-        },
-        filledSuccess: {
-          backgroundColor: modeTokens.components.alert.success.filled.background,
-          color: modeTokens.components.alert.success.filled.foreground,
-        },
         // Outlined variants
         outlinedError: {
           backgroundColor: modeTokens.components.alert.error.outlined.background,
           color: modeTokens.components.alert.error.outlined.foreground,
           borderColor: modeTokens.components.alert.error.outlined.border,
         },
-        outlinedWarning: {
-          backgroundColor: modeTokens.components.alert.warning.outlined.background,
-          color: modeTokens.components.alert.warning.outlined.foreground,
-          borderColor: modeTokens.components.alert.warning.outlined.border,
-        },
-        outlinedInfo: {
-          backgroundColor: modeTokens.components.alert.info.outlined.background,
-          color: modeTokens.components.alert.info.outlined.foreground,
-          borderColor: modeTokens.components.alert.info.outlined.border,
-        },
-        outlinedSuccess: {
-          backgroundColor: modeTokens.components.alert.success.outlined.background,
-          color: modeTokens.components.alert.success.outlined.foreground,
-          borderColor: modeTokens.components.alert.success.outlined.border,
-        },
         // Standard variants
         standardError: {
           backgroundColor: modeTokens.components.alert.error.standard.background,
           color: modeTokens.components.alert.error.standard.foreground,
-        },
-        standardWarning: {
-          backgroundColor: modeTokens.components.alert.warning.standard.background,
-          color: modeTokens.components.alert.warning.standard.foreground,
-        },
-        standardInfo: {
-          backgroundColor: modeTokens.components.alert.info.standard.background,
-          color: modeTokens.components.alert.info.standard.foreground,
-        },
-        standardSuccess: {
-          backgroundColor: modeTokens.components.alert.success.standard.background,
-          color: modeTokens.components.alert.success.standard.foreground,
         },
       },
     },
@@ -570,9 +531,6 @@ export const lightTheme: Theme = createTheme({
     primary: lightTokens.colors.primary,
     secondary: lightTokens.colors.secondary,
     error: lightTokens.colors.error,
-    warning: lightTokens.colors.warning,
-    info: lightTokens.colors.info,
-    success: lightTokens.colors.success,
     background: lightTokens.colors.background,
     text: lightTokens.colors.text,
     action: lightTokens.colors.action,
@@ -599,9 +557,6 @@ export const darkTheme: Theme = createTheme({
     primary: darkTokens.colors.primary,
     secondary: darkTokens.colors.secondary,
     error: darkTokens.colors.error,
-    warning: darkTokens.colors.warning,
-    info: darkTokens.colors.info,
-    success: darkTokens.colors.success,
     background: darkTokens.colors.background,
     text: darkTokens.colors.text,
     action: darkTokens.colors.action,

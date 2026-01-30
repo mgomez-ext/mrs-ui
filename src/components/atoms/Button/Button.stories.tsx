@@ -17,7 +17,7 @@ const meta: Meta<typeof Button> = {
     },
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'error', 'warning', 'info', 'success'],
+      options: ['primary', 'secondary', 'error'],
       description: 'The color of the button',
     },
     size: {
@@ -154,35 +154,3 @@ export const Error: Story = {
   },
 };
 
-/**
- * Warning button
- */
-export const Warning: Story = {
-  args: {
-    variant: 'contained',
-    color: 'warning',
-    children: 'Warning Button',
-  },
-};
-
-/**
- * Info button
- */
-export const Info: Story = {
-  args: {
-    variant: 'contained',
-    color: 'info',
-    children: 'Info Button',
-  },
-};
-
-/**
- * Success button
- */
-export const Success: Story = {
-  args: {
-    variant: 'contained',
-    color: 'success',
-    children: 'Success Button',
-  },
-};
